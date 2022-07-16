@@ -5,3 +5,11 @@ table {
 table, th, td {
     border:1px solid black;
 }
+
+ul {
+    margin-bottom: 0px;
+}
+
+p {
+    margin-bottom: 0px;
+}
