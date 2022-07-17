@@ -15,14 +15,43 @@ p {
 }
 
 
-div {
-    width: 100px;
-    height: 100px;
-    background: red;
-    transition: width 2s, height 4s;
+.wrap img {
+    height: 100%;
+    100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1s;
 }
-
-div:hover {
-    width: 300px;
+.wrap {
+    position: relative;
     height: 300px;
+    width: 300px;
+    transition: all 1s;
+    overflow: hidden;
+}
+.wrap img:last-child {
+    top: 100%;
+}
+.wrap:hover img:first-child {
+    top: -100%;
+}
+.wrap:hover img:last-child {
+    top: 0;
+}
+.wrap p {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    color: white;
+    transition: all 1s;
+    z-index: 8;
+}
+.wrap:hover p {
+    opacity: 1;
 }
