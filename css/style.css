@@ -1,6 +1,7 @@
 body {
     background-image: url("../img/background.jpg");
     font-family: FreeMono, monospace;
+    text-align: justify;
 }
 
 table {
@@ -17,4 +18,5 @@ ul {
 
 p {
     margin-bottom: 0px;
+
 }
