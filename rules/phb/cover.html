@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -16,10 +16,49 @@
     The whole team hides behind the big hero, who protects his teammates with his body.<br>
     Paragon tries to hunt down his opponent, but he disappears in a massive crowd of people.<br>
     <hr>
-    A lot of times the defending character will have some kind of advantage because it is harder to hit her due to objects and people in front of her. Unlike other systems, in Singularity's system, modifiers from covers STACK WITH EACH OTHER. This developer decision was made because, in our opinion, the rules related to covers are intuitive and cause confusion only in the first fight, but later they significantly contribute to making the fight as tactical as possible and positioning plays an important role during encounters.</p>
+    A lot of times the defending character will have some kind of advantage because
+     it is harder to hit her due to objects and people in front of her. All objects and characters provide cover
+      that touches the line between the center of the attacking party's token and the center of the defending party's token at any level.
+       Unlike other systems, 
+     in Singularity's system, modifiers from covers STACK WITH EACH OTHER. This developer decision was made because, 
+     in our opinion, the rules related to covers are intuitive and cause confusion only in the first fight, 
+     but later they significantly contribute to making the fight as
+      tactical as possible and positioning plays an important role during encounters.</p>
+
+<h3>Cover from another character</h3>
+<p>Any character between the attacker and defender gives the defender a bonus. 
+    This does not change whether the character is friend or foe, participates in the fight or not.</p>
+<h4>Calculating the bonus</h4>
+<p>What should be considered when calculating cover is the size of the defender and the size of those providing cover. All characters of the same size as the defender who fall in the line of attack give +1 Defensive Prowess to the defender.
+    Apart from different talents and special actions, there are two important things that change this:</p>
+    <h5>Size:</h5>
 <ul>
-    <li>Cosmos Knight</li>
-    <li>Fighter</li>
+ <li>Characters larger than their defensive size give +1 Defensive Prowess for each size category.</li>
+ <li>Characters smaller than the defender's size give -1  Defensive Prowess for each size category (minimum 0).</li>
+</ul>
+<h5>Prone condition</h5>
+<ul>
+<li>Prone characters give -1 less Defensive Prowess (minimum 0).</li>
+</ul>
+<h3>Examples</h3>
+<p>The attacker fires his pistol at the defender. The defender is of medium size. There are three characters between them, all of them are medium size. -> 1 medium character + 1 medium character + 1 medium character= the defender gets +3 Defensive Prowess</p>
+<p>The attacker fires his pistol at the defender. The defender is of small size. There are two characters between them, both of them are medium size. -> 1 medium character worths 2 DP because the defender is one size smaller + 1 medium character worths 2 DP because the defender is one size smaller = the defender gets +4 Defensive Prowess</p>
+<p>The attacker fires his pistol at the defender. The defender is of large size. There are two characters between them, one of them is medium size and the other one is large . -> 1 medium character worths 0 DP because the defender is one size larger + 1 large character worths 1 DP because, because she is same size as the defender = the defender gets +1 Defensive Prowess</p>
+<p>The attacker fires his pistol at the defender. The defender is of large size. There are two characters between them, one of them is medium size and the other one is small. -> 1 medium character worths 0 DP because the defender is one size larger + 1 small character worths 0 DP because the defender is two size larger, and the bonus can not be negative = the defender gets +0 Defensive Prowess</p>
+<p>The attacker fires his pistol at the defender. The defender is of medium size. There are two characters between them, one of them is a medium size prone character and the other one is small. -> 1 medium character, who is prone worths 0 DP + 1 small character worths 0 DP because the defender is one size larger, and the bonus can not be negative = the defender gets +0 Defensive Prowess</p>
+<p>The attacker fires his pistol at the defender. The defender is of tiny size. There is one characters between them, she is super-huge, but she is prone. -> 1 super-huge character(5 DP, because +1 basic and +4 for size difference), who is prone(-1) worths 4 DP = the defender gets +4 Defensive Prowess</p>
+
+<hr>
+
+<h3>Cover from objects</h3>
+<p>Any object between the attacker and defender gives the defender a bonus. </p>
+<h4>Calculating the bonus</h4>
+<p>We distinguish between three different types of cover</p>
+<h5>Cover size:</h5>
+<ul>
+ <li>   small cover: a cover behind which the character is visible</li>
+  <li> medium cover: a cover that can just cover the silhouette of the defending character</li>
+    <li>huge cover: cover that completely covers the character, in which case the character cannot be attacked.</li>
 </ul>
 </body>
 </html>
