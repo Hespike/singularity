@@ -2,6 +2,7 @@ body {
     background-image: url("../img/background.jpg");
     font-family: FreeMono, monospace;
     text-align: justify;
+    margin: 30px 30px;
 }
 
 table {

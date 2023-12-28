@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cover | Singularity</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="icon" href="../../css/style.css">
 </head>
 
 <body>
 
 <h1>Cover rules</h1>
-<p>The sniper hides behind a car when mobsters open fire on him.<br>
+<p>The policeman crouches behind his car when mobsters open fire on him.<br>
     The whole team hides behind the big hero, who protects his teammates with his body.<br>
     Paragon tries to hunt down his opponent, but he disappears in a massive crowd of people.<br>
+    
     <hr>
     A lot of times the defending character will have some kind of advantage because
      it is harder to hit her due to objects and people in front of her. All objects and characters provide cover
@@ -23,9 +24,12 @@
      in Singularity's system, modifiers from covers STACK WITH EACH OTHER. This developer decision was made because, 
      in our opinion, the rules related to covers are intuitive and cause confusion only in the first fight, 
      but later they significantly contribute to making the fight as
-      tactical as possible and positioning plays an important role during encounters.</p>
+      tactical as possible.</p>
 
-<h3>Cover from another character</h3>
+<p>The total bonus a character gets from covers looks like this:
+    <strong>Total Defensive Prowess bonus = Cover from other characters + Cover from objects</strong></p>
+      <hr>
+<h3>Cover from another characters</h3>
 <p>Any character between the attacker and defender gives the defender a bonus. 
     This does not change whether the character is friend or foe, participates in the fight or not.</p>
 <h4>Calculating the bonus</h4>
@@ -41,12 +45,12 @@
 <li>Prone characters give -1 less Defensive Prowess (minimum 0).</li>
 </ul>
 <h3>Examples</h3>
-<p>The attacker fires his pistol at the defender. The defender is of medium size. There are three characters between them, all of them are medium size. -> 1 medium character + 1 medium character + 1 medium character= the defender gets +3 Defensive Prowess</p>
-<p>The attacker fires his pistol at the defender. The defender is of small size. There are two characters between them, both of them are medium size. -> 1 medium character worths 2 DP because the defender is one size smaller + 1 medium character worths 2 DP because the defender is one size smaller = the defender gets +4 Defensive Prowess</p>
-<p>The attacker fires his pistol at the defender. The defender is of large size. There are two characters between them, one of them is medium size and the other one is large . -> 1 medium character worths 0 DP because the defender is one size larger + 1 large character worths 1 DP because, because she is same size as the defender = the defender gets +1 Defensive Prowess</p>
-<p>The attacker fires his pistol at the defender. The defender is of large size. There are two characters between them, one of them is medium size and the other one is small. -> 1 medium character worths 0 DP because the defender is one size larger + 1 small character worths 0 DP because the defender is two size larger, and the bonus can not be negative = the defender gets +0 Defensive Prowess</p>
-<p>The attacker fires his pistol at the defender. The defender is of medium size. There are two characters between them, one of them is a medium size prone character and the other one is small. -> 1 medium character, who is prone worths 0 DP + 1 small character worths 0 DP because the defender is one size larger, and the bonus can not be negative = the defender gets +0 Defensive Prowess</p>
-<p>The attacker fires his pistol at the defender. The defender is of tiny size. There is one characters between them, she is super-huge, but she is prone. -> 1 super-huge character(5 DP, because +1 basic and +4 for size difference), who is prone(-1) worths 4 DP = the defender gets +4 Defensive Prowess</p>
+<p>The attacker fires his pistol at the defender. The defender is of <strong>medium</strong> size. There are three characters between them, all of them are medium size. -> 1 medium character + 1 medium character + 1 medium character = the defender gets +3 Defensive Prowess</p>
+<p>The attacker fires his pistol at the defender. The defender is of <strong>small</strong> size. There are two characters between them, both of them are medium size. -> 1 medium character worths 2 Defensive Prowess because the defender is one size smaller + 1 medium character worths 2 Defensive Prowess because the defender is one size smaller = the defender gets +4 Defensive Prowess</p>
+<p>The attacker fires his pistol at the defender. The defender is of <strong>large</strong> size. There are two characters between them, one of them is medium size and the other one is large . -> 1 medium character worths 0 Defensive Prowess because the defender is one size larger + 1 large character worths 1 Defensive Prowess because, because she is same size as the defender = the defender gets +1 Defensive Prowess</p>
+<p>The attacker fires his pistol at the defender. The defender is of <strong>large</strong> size. There are two characters between them, one of them is medium size and the other one is small. -> 1 medium character worths 0 Defensive Prowess because the defender is one size larger + 1 small character worths 0 Defensive Prowess because the defender is two size larger, and the bonus can not be negative = the defender gets +0 Defensive Prowess</p>
+<p>The attacker fires his pistol at the defender. The defender is of <strong>medium</strong> size. There are two characters between them, one of them is a medium size prone character and the other one is small. -> 1 medium character, who is prone worths 0 Defensive Prowess + 1 small character worths 0 Defensive Prowess because the defender is one size larger, and the bonus can not be negative = the defender gets +0 Defensive Prowess</p>
+<p>The attacker fires his pistol at the defender. The defender is of <strong>tiny</strong> size. There is one characters between them, she is super-huge, but she is prone. -> 1 super-huge character(5 Defensive Prowess, because +1 basic and +4 for size difference), who is prone(-1) worths 4 Defensive Prowess = the defender gets +4 Defensive Prowess</p>
 
 <hr>
 
