@@ -10,6 +10,21 @@ document.getElementById("strongerpunchButton").addEventListener("click", functio
 
   function generateTableData() {
     const table = document.getElementById('myTable');
+    while (table.firstChild) {
+      table.removeChild(table.firstChild);
+    }
+  
+    const headerTr = document.createElement('tr');
+    const levelHdrTd = document.createElement('th');
+    const bonusHdrTd = document.createElement('th');
+  
+    levelHdrTd.textContent = 'Level';
+    bonusHdrTd.textContent = 'Defensive Prowess Bonus';
+  
+    headerTr.appendChild(levelHdrTd);
+    headerTr.appendChild(bonusHdrTd);
+    table.appendChild(headerTr);
+  
     const levelData = [1, 5, 10, 15, 20];
     const bonusData = [2, 4, 6, 8, 10];
   
