@@ -19,7 +19,7 @@ feature17
 feature20
 
 Brawler
-HP
+HP 12
 skills
 feature1
 feature3
@@ -31,7 +31,7 @@ feature17
 feature20
 
 Detective
-HP 8
+HP 6
 skills 6:(4 lore), és megkapja mindenképp perceptiont és investigationt. 
 feature1: Prep time  /  gadgets
 feature3
@@ -43,7 +43,7 @@ feature17
 feature20
 
 Monster?
-HP
+HP 12
 skills
 feature1
 feature3
@@ -55,7 +55,7 @@ feature17
 feature20
 
 Sharpshooter
-HP8
+HP 6
 skills 2:(perception, intimidation, stealth, acrobatics)
 feature1: Preferred gun/ Modular weapons
 feature3
@@ -67,7 +67,7 @@ feature17
 feature20
 
 Paragon
-HP 12
+HP 10
 skills 2:(intimidation, persuasion,athletics, acrobatics)
 feature1: flying speed 10(5-20,10-30,15-40,20-50) stronger punch
 feature3
@@ -91,7 +91,7 @@ feature17
 feature20
 
 Sizechanger
-HP
+HP 6
 skills
 feature1
 feature3
@@ -115,7 +115,7 @@ feature17
 feature20
 
 Techie
-HP
+HP 6
 skills
 feature1
 feature3
