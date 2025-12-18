@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Using Ability Scores | Singularity Player's Handbook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/infinitylogo.png">
+</head>
+
+<body>
+<div class="container mt-5">
+    <h1>3. Using Ability Scores</h1>
+
+    <p>Each character has five core ability scores that define their essential traits. These are:</p>
+    <ul>
+        <li><strong>Might:</strong> Represents the hero’s physical strength.</li>
+        <li><strong>Agility:</strong> Reflects the hero’s dexterity and speed.</li>
+        <li><strong>Endurance:</strong> Measures the hero’s stamina and resilience.</li>
+        <li><strong>Wits:</strong> Indicates the hero’s mental acuity and focus.</li>
+        <li><strong>Charm:</strong> Expresses the hero’s charisma and force of personality.</li>
+    </ul>
+
+    <p>These abilities play a crucial role during gameplay, as they influence the outcome of the most important dice rolls: <strong>ability checks</strong>, <strong>saving throws</strong>, and <strong>attack rolls</strong>.</p>
+
+    <h2 class="mt-4">Training Rank</h2>
+    <p>Heroes are skilled in various abilities, each of which progresses through five distinct levels of proficiency. All skills start at the Novice level.</p>
+    <ul>
+        <li><strong>Novice</strong>: The hero has minimal experience with the skill. They can perform basic tasks but lack the expertise to handle complex situations. Add only your ability modifier to the roll.</li>
+        <li><strong>Apprentice</strong>: Some practical experience. Add ability modifier + 5.</li>
+        <li><strong>Competent</strong>: Solid understanding. Add ability modifier + 10.</li>
+        <li><strong>Masterful</strong>: Expert. Add ability modifier + 15.</li>
+        <li><strong>Legendary</strong>: Pinnacle mastery. Add ability modifier + 20.</li>
+    </ul>
+
+    <h2 class="mt-4">Modifiers</h2>
+    <p>Your ability scores determine modifiers as follows:</p>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Score</th>
+                    <th>Modifier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>-5</td></tr>
+                <tr><td>2-3</td><td>-4</td></tr>
+                <tr><td>4-5</td><td>-3</td></tr>
+                <tr><td>6-7</td><td>-2</td></tr>
+                <tr><td>8-9</td><td>-1</td></tr>
+                <tr><td>10-11</td><td>0</td></tr>
+                <tr><td>12-13</td><td>+1</td></tr>
+                <tr><td>14-15</td><td>+2</td></tr>
+                <tr><td>16-17</td><td>+3</td></tr>
+                <tr><td>18-19</td><td>+4</td></tr>
+                <tr><td>20-21</td><td>+5</td></tr>
+                <tr><td>22-23</td><td>+6</td></tr>
+                <tr><td>24-25</td><td>+7</td></tr>
+                <tr><td>26-27</td><td>+8</td></tr>
+                <tr><td>28-29</td><td>+9</td></tr>
+                <tr><td>30</td><td>+10</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p>When a roll instructs you to add your ability modifier, it refers to this value.</p>
+
+    <h2 class="mt-4">Advantage/Disadvantage</h2>
+    <p>Roll two dice instead of one:</p>
+    <ul>
+        <li><strong>Advantage:</strong> Use the higher roll.</li>
+        <li><strong>Disadvantage:</strong> Use the lower roll.</li>
+    </ul>
+    <p><strong>Example:</strong> Roll 4 and 13 → with advantage use 13, with disadvantage use 4.</p>
+    <p>Multiple sources do not stack. If you gain both advantage and disadvantage, they cancel out.</p>
+
+    <h2 class="mt-4">Ability Checks</h2>
+    <p>When a hero attempts a non-trivial action, they perform an <strong>ability check</strong>. The Architect decides the ability/skill involved and sets the DC.</p>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>DC</th>
+                    <th>Difficulty Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>5</td><td>Trivial task — success is almost guaranteed</td></tr>
+                <tr><td>10</td><td>Easy task — minimal effort</td></tr>
+                <tr><td>15</td><td>Moderate task — standard challenge</td></tr>
+                <tr><td>20</td><td>Hard task — requires skill/focus</td></tr>
+                <tr><td>25</td><td>Very hard task — only experts succeed</td></tr>
+                <tr><td>30</td><td>Nearly impossible — only exceptional success</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p>Roll a 20-sided die and add the relevant ability modifier. Success = result ≥ DC.</p>
+
+    <h2 class="mt-4">Skills</h2>
+    <p>Characters possess abilities, not skills by default. Skills represent specialized training and appear on the sheet only if trained.</p>
+    <ul>
+        <li>If not trained: use only ability modifier.</li>
+        <li>If trained: follow normal training rank rules (Novice → Legendary).</li>
+    </ul>
+
+    <h3 class="mt-4">Ability–Skill Associations</h3>
+    <p>Each trained skill is linked to an ability:</p>
+    <ul>
+        <li><strong>Might:</strong> Athletics</li>
+        <li><strong>Agility:</strong> Acrobatics, Dexterity, Piloting (Flying Vehicles), Piloting (Land Vehicles), Piloting (Aquatic Vehicles), Stealth</li>
+        <li><strong>Endurance:</strong> *(No default skills)*</li>
+        <li><strong>Wits:</strong> Animal Handling, Insight, Investigation, Lore (History, Medicine, Nature, Religion, Technology), Perception, Survival</li>
+        <li><strong>Charm:</strong> Deception, Intimidation, Performance, Persuasion</li>
+    </ul>
+    <p>These are suggestions. The Architect may add additional skills. Final authority rests with the Architect.</p>
+
+    <hr>
+
+    <h3 class="mt-4">Helping</h3>
+    <p>Two characters (PCs or NPCs) can assist each other with skill checks, adding the helper's total modifier (ability + training + other modifiers) to the acting character's roll.</p>
+    <p>Assistance is possible if:</p>
+    <ul>
+        <li>The helper could reasonably attempt the task themselves.</li>
+        <li>The helper’s actions meaningfully contribute.</li>
+    </ul>
+    <p><strong>Examples:</strong></p>
+    <ul>
+        <li>Recalling information about a location: helper can add <strong>Lore (History)</strong>.</li>
+        <li>Driving a helicopter: another character cannot use their own motorcycle Piloting modifier, but may assist using <strong>Lore (Technology)</strong> to explain systems.</li>
+    </ul>
+    <p>The GM has final authority over assistance and applicable modifiers.</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
