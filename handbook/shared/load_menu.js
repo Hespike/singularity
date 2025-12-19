@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("../shared/menu.html")
+    fetch("shared/menu.html")
         .then(response => {
             if (!response.ok) {
                 throw new Error("Failed to load menu");
@@ -10,6 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("menu-placeholder").innerHTML = html;
         })
         .catch(error => {
-            console.error("Menu error:", error);
+            console.error("Menu loading error:", error);
         });
 });
