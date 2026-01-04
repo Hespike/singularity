@@ -59,7 +59,6 @@
     <div class="d-flex justify-content-end mb-3 no-print">
         <div>
             <button onclick="toggleDarkMode()" class="btn btn-sm btn-outline-primary" id="themeBtn">Dark Mode</button>
-            <button onclick="clearSheet()" class="btn btn-sm btn-outline-danger">Clear Sheet</button>
             <button onclick="window.print()" class="btn btn-sm btn-success">Save as PDF</button>
         </div>
     </div>
@@ -211,16 +210,6 @@
         if (localStorage.getItem('singularity_darkMode') === 'true') toggleDarkMode();
     };
 
-    function clearSheet() {
-        if (confirm("Delete all data? This cannot be undone.")) {
-            allInputs.forEach(el => { 
-                if (el.id) { 
-                    localStorage.removeItem('sheet_' + el.id); 
-                }
-            });
-            location.reload();
-        }
-    }
 </script>
 </body>
 </html>
