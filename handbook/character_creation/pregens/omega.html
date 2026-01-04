@@ -3,202 +3,217 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Character Sheet - Omega | Singularity PHB</title>
+    <title>Singularity Interactive Sheet - Omega</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="icon" href="../../img/infinitylogo.png">
     <style>
-        @media print {
-            .no-print, .btn, script, .bmc-widget { display: none !important; }
-            body { background-color: white !important; }
-            .container { width: 100% !important; max-width: none !important; }
+        body { transition: background-color 0.3s, color 0.3s; }
+        input[type="text"], textarea {
+            width: 100%; border: none; background: transparent; color: inherit;
+            outline: none; font-family: inherit; padding: 2px 5px;
         }
-        .stat-box {
-            text-align: center;
-            padding: 15px;
-            border: 1px solid #dee2e6;
-            background: #fff;
-            min-height: 90px;
-        }
-        .stat-value { font-size: 1.8rem; font-weight: bold; height: 40px; }
-        .hp-box { border: 2px solid #000; padding: 10px; min-height: 80px; }
-        .wound-row { margin-bottom: 8px; }
+        textarea { resize: none; width: 100%; display: block; }
+        input[type="text"]:focus, textarea:focus { background: rgba(0, 123, 255, 0.1); }
+
+        .hero-header { display: flex; align-items: center; gap: 15px; border-bottom: 3px solid #000; padding-bottom: 5px; }
+        .hero-header h1 { margin: 0; font-size: 2rem; font-weight: 800; text-transform: uppercase; }
+        .hero-header input { font-size: 2rem; font-weight: bold; }
+
+        .stat-box { text-align: center; padding: 10px; border: 1px solid #dee2e6; background: #fff; min-height: 90px; }
+        .stat-value input { font-size: 1.8rem; font-weight: bold; text-align: center; height: 45px; }
+        .hp-box { border: 2px solid #000; padding: 5px; min-height: 80px; display: flex; align-items: center; }
+        .hp-box input { font-size: 1.5rem; text-align: center; }
+        
         .wound-location { border: 1px solid #ced4da; height: 35px; background: #f8f9fa; }
         .wound-penalty { border: 1px solid #ced4da; height: 35px; background: #fff; }
-        .note-box { border: 1px solid #ced4da; min-height: 120px; background: #fff; }
+        .note-box { border: 1px solid #ced4da; min-height: 120px; background: #fff; padding: 5px; }
+        
+        .info-row { display: flex; align-items: baseline; margin-bottom: 0.5rem; border-bottom: 1px solid #dee2e6; padding-bottom: 2px; }
+        .info-label { white-space: nowrap; margin-right: 8px; font-weight: bold; }
+
+        body.dark-mode { background-color: #121212 !important; color: #e0e0e0 !important; }
+        .dark-mode .card { background-color: #1e1e1e !important; border-color: #333 !important; color: #e0e0e0; }
+        .dark-mode .card-header { background-color: #2d2d2d !important; color: #fff !important; }
+        .dark-mode .stat-box, .dark-mode .note-box, .dark-mode .wound-penalty { background-color: #1e1e1e !important; border-color: #444 !important; }
+        .dark-mode .wound-location { background-color: #2d2d2d !important; border-color: #444 !important; }
+        .dark-mode .hp-box { border-color: #00d4ff; }
+        .dark-mode .table { color: #e0e0e0 !important; border-color: #444 !important; }
+        .dark-mode .table thead th { background-color: #343a40 !important; color: #fff !important; border-color: #444 !important; }
+        .dark-mode .table td { background-color: #1e1e1e !important; border-color: #444 !important; }
+        .dark-mode .info-row { border-color: #444 !important; }
+        .dark-mode .hero-header { border-color: #fff !important; }
+        .dark-mode .text-muted, .dark-mode small { color: #ffffff !important; opacity: 1; font-weight: 500; }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background-color: white !important; color: black !important; }
+            .hero-header { border-color: black !important; }
+        }
     </style>
 </head>
 
 <body>
-<div class="container mt-5 pb-5">
-    <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
-        <h1>Hero: Omega</h1>
-        <button onclick="window.print()" class="btn btn-secondary no-print">Print Sheet</button>
+<div class="container mt-4 pb-5">
+    <div class="d-flex justify-content-end mb-3 no-print">
+        <div>
+            <button onclick="toggleDarkMode()" class="btn btn-sm btn-outline-primary" id="themeBtn">Dark Mode</button>
+            <button onclick="clearSheet()" class="btn btn-sm btn-outline-danger">Clear Sheet</button>
+            <button onclick="window.print()" class="btn btn-sm btn-success">Save as PDF</button>
+        </div>
+    </div>
+
+    <div class="hero-header w-100 mb-4">
+        <h1>Hero:</h1>
+        <input type="text" id="hero_name" value="Omega">
     </div>
 
     <div class="row mb-4">
-        <div class="col-md-6">
-            <p class="mb-2 border-bottom py-1"><strong>Real Name:</strong> Unknown</p>
-            <p class="mb-2 border-bottom py-1"><strong>Phenotype / Subtype:</strong> Human / Terran</p>
-            <p class="mb-2 border-bottom py-1"><strong>Powerset:</strong> Paragon</p>
+        <div class="col-md-6 border-end">
+            <div class="info-row"><span class="info-label">Real Name:</span> <input type="text" id="real_name" value=""></div>
+            <div class="info-row"><span class="info-label">Phenotype / Subtype:</span> <input type="text" id="phenotype" value="Human / Terran"></div>
+            <div class="info-row"><span class="info-label">Powerset:</span> <input type="text" id="powerset" value="Paragon"></div>
         </div>
         <div class="col-md-6">
-            <p class="mb-2 border-bottom py-1"><strong>Background:</strong> Athlete</p>
-            <p class="mb-2 border-bottom py-1"><strong>Base Speed:</strong> 25 ft (Flight 15 ft)</p>
-            <p class="mb-2 border-bottom py-1"><strong>Prime Level:</strong> 1</p>
+            <div class="info-row"><span class="info-label">Background:</span> <input type="text" id="background" value="Athlete"></div>
+            <div class="row g-2">
+                <div class="col-4"><div class="info-row"><span class="info-label">Level:</span> <input type="text" id="level" value="1"></div></div>
+                <div class="col-4"><div class="info-row"><span class="info-label">Size:</span> <input type="text" id="size" value="Medium"></div></div>
+                <div class="col-4"><div class="info-row"><span class="info-label">Speed:</span> <input type="text" id="speed" value="25ft (15ft Fly)"></div></div>
+            </div>
         </div>
     </div>
 
     <div class="row mb-4 text-center">
         <div class="col-md-4">
             <div class="card h-100">
-                <div class="card-header bg-dark text-white">Vitality & Defense</div>
+                <div class="card-header bg-dark text-white fw-bold">Vitality & Defense</div>
                 <div class="card-body">
                     <div class="row align-items-center">
-                        <div class="col-4">
-                            <small class="text-muted d-block">MAX HP</small>
-                            <div class="h3 pt-2">12</div>
-                        </div>
-                        <div class="col-4">
-                            <small class="text-muted d-block">CURRENT</small>
-                            <div class="hp-box"></div>
-                        </div>
-                        <div class="col-4">
-                            <small class="text-muted d-block">AC</small>
-                            <div class="h3 pt-2">11</div>
-                        </div>
+                        <div class="col-4"><small class="text-muted d-block">MAX HP</small><input type="text" id="max_hp" class="h3 text-center w-100" value="15"></div>
+                        <div class="col-4"><small class="text-muted d-block">CURRENT</small><div class="hp-box"><input type="text" id="curr_hp" class="w-100" value="15"></div></div>
+                        <div class="col-4"><small class="text-muted d-block">AC</small><input type="text" id="ac_val" class="h3 text-center w-100" value="12"></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-8">
             <div class="card h-100">
-                <div class="card-header bg-dark text-white text-center">Wounds Tracking</div>
+                <div class="card-header bg-dark text-white text-center fw-bold">Wounds Tracking</div>
                 <div class="card-body">
-                    <div class="row mb-1">
-                        <div class="col-4 text-start"><small class="text-muted ps-2">Location</small></div>
-                        <div class="col-8 text-start"><small class="text-muted">Active Penalty</small></div>
-                    </div>
-                    <div class="row wound-row g-1"><div class="col-4"><div class="wound-location"></div></div><div class="col-8"><div class="wound-penalty"></div></div></div>
-                    <div class="row wound-row g-1"><div class="col-4"><div class="wound-location"></div></div><div class="col-8"><div class="wound-penalty"></div></div></div>
-                    <div class="row wound-row g-1"><div class="col-4"><div class="wound-location"></div></div><div class="col-8"><div class="wound-penalty"></div></div></div>
-                    <div class="row wound-row g-1"><div class="col-4"><div class="wound-location"></div></div><div class="col-8"><div class="wound-penalty"></div></div></div>
+                    <div class="row mb-1 g-1"><div class="col-4 text-start"><small class="text-muted ps-2">Location</small></div><div class="col-8 text-start"><small class="text-muted">Active Penalty</small></div></div>
+                    <div class="row mb-1 g-1"><div class="col-4"><div class="wound-location"><input type="text" id="w_loc_1"></div></div><div class="col-8"><div class="wound-penalty"><input type="text" id="w_pen_1"></div></div></div>
+                    <div class="row mb-1 g-1"><div class="col-4"><div class="wound-location"><input type="text" id="w_loc_2"></div></div><div class="col-8"><div class="wound-penalty"><input type="text" id="w_pen_2"></div></div></div>
+                    <div class="row mb-1 g-1"><div class="col-4"><div class="wound-location"><input type="text" id="w_loc_3"></div></div><div class="col-8"><div class="wound-penalty"><input type="text" id="w_pen_3"></div></div></div>
+                    <div class="row mb-1 g-1"><div class="col-4"><div class="wound-location"><input type="text" id="w_loc_4"></div></div><div class="col-8"><div class="wound-penalty"><input type="text" id="w_pen_4"></div></div></div>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="row g-0 mb-5">
-        <div class="col"><div class="stat-box"><div class="small fw-bold">MIGHT</div><div class="stat-value">+3</div></div></div>
-        <div class="col"><div class="stat-box"><div class="small fw-bold">AGILITY</div><div class="stat-value">0</div></div></div>
-        <div class="col"><div class="stat-box"><div class="small fw-bold">ENDURANCE</div><div class="stat-value">+2</div></div></div>
-        <div class="col"><div class="stat-box"><div class="small fw-bold">WITS</div><div class="stat-value">0</div></div></div>
-        <div class="col"><div class="stat-box"><div class="small fw-bold">CHARM</div><div class="stat-value">0</div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">MIGHT</div><div class="stat-value"><input type="text" id="stat_might" value="+3"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">AGILITY</div><div class="stat-value"><input type="text" id="stat_agility" value="+2"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">ENDURANCE</div><div class="stat-value"><input type="text" id="stat_end" value="+1"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">WITS</div><div class="stat-value"><input type="text" id="stat_wits" value="+0"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">CHARM</div><div class="stat-value"><input type="text" id="stat_charm" value="+1"></div></div></div>
     </div>
 
     <div class="row">
         <div class="col-md-6">
-            <h3>Skills</h3>
+            <h3>Trainings</h3>
             <table class="table table-bordered table-sm mb-4">
-                <thead class="table-light">
-                    <tr>
-                        <th style="width: 45%;">Skill Name</th>
-                        <th style="width: 25%;">Ability</th>
-                        <th style="width: 30%;">Training</th>
-                    </tr>
-                </thead>
+                <thead class="table-light"><tr><th>Name</th><th>Ability</th><th>Training</th></tr></thead>
                 <tbody>
-                    <tr style="height: 38px;"><td>Athletics</td><td>Might</td><td>Apprentice</td></tr>
-                    <tr style="height: 38px;"><td></td><td></td><td></td></tr>
-                    <tr style="height: 38px;"><td></td><td></td><td></td></tr>
-                    <tr style="height: 38px;"><td></td><td></td><td></td></tr>
+                    <tr><td><input type="text" id="sk_n_1" value="Athletics"></td><td><input type="text" id="sk_a_1" value="Might"></td><td><input type="text" id="sk_t_1" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_2" value="Acrobatics"></td><td><input type="text" id="sk_a_2" value="Agility"></td><td><input type="text" id="sk_t_2" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_3" value="Blast"></td><td><input type="text" id="sk_a_3" value="Might"></td><td><input type="text" id="sk_t_3" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_4" value="Unarmed"></td><td><input type="text" id="sk_a_4" value="Might"></td><td><input type="text" id="sk_t_4" value="Novice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_5"></td><td><input type="text" id="sk_a_5"></td><td><input type="text" id="sk_t_5"></td></tr>
                 </tbody>
             </table>
-
             <h3>Powers & Abilities</h3>
             <table class="table table-bordered table-sm mb-4">
-                <thead class="table-light">
-                    <tr>
-                        <th style="width: 30%;">Name</th>
-                        <th style="width: 70%;">Effect</th>
-                    </tr>
-                </thead>
+                <thead class="table-light"><tr><th style="width: 30%;">Name</th><th style="width: 70%;">Effect</th></tr></thead>
                 <tbody>
-                    <tr style="height: 38px;"><td>Blast (Chaos)</td><td>Agility vs AC. Cosmic eye rays.</td></tr>
-                    <tr style="height: 38px;"><td>Impact Control</td><td>Take half damage from falling.</td></tr>
-                    <tr style="height: 38px;"><td>Enhanced Strikes</td><td>Unarmed damage die increases by one step.</td></tr>
-                    <tr style="height: 38px;"><td>Flight</td><td>Gain 15 ft flying speed.</td></tr>
-                    <tr style="height: 38px;"><td></td><td></td></tr>
-                    <tr style="height: 38px;"><td></td><td></td></tr>
+                    <tr><td><input type="text" id="p_n_1" value="Cosmic Blast"></td><td><input type="text" id="p_e_1" value="30ft Ranged, +7 Hit, 1d4+3 Cosmic (2 Energy)"></td></tr>
+                    <tr><td><input type="text" id="p_n_2" value="Unarmed Strike"></td><td><input type="text" id="p_e_2" value="Melee, 1d4+3 Kinetic"></td></tr>
+                    <tr><td><input type="text" id="p_n_3" value="Flight"></td><td><input type="text" id="p_e_3" value="Flying speed 15 feet"></td></tr>
+                    <tr><td><input type="text" id="p_n_4" value="Impact Control"></td><td><input type="text" id="p_e_4" value="Half damage from falling"></td></tr>
+                    <tr><td><input type="text" id="p_n_5" value="Enhanced Vitality"></td><td><input type="text" id="p_e_5" value="+2 Max HP per Prime Level"></td></tr>
                 </tbody>
             </table>
         </div>
-
         <div class="col-md-6">
             <div class="card mb-3 border-success">
-                <div class="card-header bg-success text-white d-flex justify-content-between align-items-center py-1">
+                <div class="card-header bg-success text-white d-flex justify-content-between align-items-center py-1 fw-bold">
                     <span class="small">Available Funds</span>
-                    <span class="badge bg-white text-success">8 Credits</span>
+                    <span class="d-flex align-items-center"><input type="text" id="credits" class="text-white text-end me-1" style="width: 80px;" value="10"> Credits</span>
                 </div>
             </div>
             <div class="card mb-4">
-                <div class="card-header bg-secondary text-white">Inventory</div>
-                <div class="card-body">
-                    <ul class="list-unstyled mb-0">
-                        <li class="border-bottom py-2"><strong>Jacket:</strong> Light Armor (AC 11, No Cap)</li>
-                        <li class="border-bottom py-2" style="height: 38px;"></li>
-                        <li class="border-bottom py-2" style="height: 38px;"></li>
-                        <li class="border-bottom py-2" style="height: 38px;"></li>
-                    </ul>
-                </div>
+                <div class="card-header bg-secondary text-white fw-bold">Inventory</div>
+                <div class="card-body p-0"><textarea id="inv_box" rows="6" placeholder="List items..."></textarea></div>
             </div>
-
             <h3>Progression</h3>
             <table class="table table-sm table-bordered">
-                <thead class="table-light">
-                    <tr>
-                        <th style="width: 30%;">Source</th>
-                        <th style="width: 70%;">Effect</th>
-                    </tr>
-                </thead>
+                <thead class="table-light"><tr><th style="width: 30%;">Source</th><th style="width: 70%;">Effect</th></tr></thead>
                 <tbody>
-                    <tr style="height: 38px;"><td>Phenotype (Human)</td><td>+1 Might, Blast Talent</td></tr>
-                    <tr style="height: 38px;"><td>Subtype (Terran)</td><td>+1 Endurance, Light Armor Training</td></tr>
-                    <tr style="height: 38px;"><td>Background (Athlete)</td><td>+1 Endurance, Athletics (Apprentice)</td></tr>
-                    <tr style="height: 38px;"><td>Powerset (Paragon)</td><td>+1 Might (Boost), +1 Might (Choice)</td></tr>
-                    <tr style="height: 38px;"><td>Powerset (Paragon)</td><td>Flight, Impact Control, Enhanced Unarmed</td></tr>
-                    <tr style="height: 38px;"><td></td><td></td></tr>
-                    <tr style="height: 38px;"><td></td><td></td></tr>
-                    <tr style="height: 38px;"><td></td><td></td></tr>
+                    <tr><td><input type="text" id="pr_s_1" value="Phenotype"></td><td><input type="text" id="pr_e_1" value="+1 Might, Blast Talent (Cosmic/Might)"></td></tr>
+                    <tr><td><input type="text" id="pr_s_2" value="Subtype"></td><td><input type="text" id="pr_e_2" value="+1 Agility, Enhanced Vitality Talent"></td></tr>
+                    <tr><td><input type="text" id="pr_s_3" value="Powerset"></td><td><input type="text" id="pr_e_3" value="+1 Might, +1 End, +1 Cha, Athletics Apprentice"></td></tr>
+                    <tr><td><input type="text" id="pr_s_4" value="Background"></td><td><input type="text" id="pr_e_4" value="+1 Might, Acrobatics Apprentice"></td></tr>
+                    <tr><td><input type="text" id="pr_s_5" value="Paragon Talent"></td><td><input type="text" id="pr_e_5" value="Impact Control"></td></tr>
+                    <tr><td><input type="text" id="pr_s_6"></td><td><input type="text" id="pr_e_6"></td></tr>
+                    <tr><td><input type="text" id="pr_s_7"></td><td><input type="text" id="pr_e_7"></td></tr>
+                    <tr><td><input type="text" id="pr_s_8"></td><td><input type="text" id="pr_e_8"></td></tr>
+                    <tr><td><input type="text" id="pr_s_9"></td><td><input type="text" id="pr_e_9"></td></tr>
+                    <tr><td><input type="text" id="pr_s_10"></td><td><input type="text" id="pr_e_10"></td></tr>
                 </tbody>
             </table>
         </div>
     </div>
-
-    <div class="row mt-2">
-        <div class="col-12">
-            <h3>Notes</h3>
-            <div class="note-box p-3"></div>
-        </div>
-    </div>
-        <div class="row mt-2">
-        <div class="col-12">
-            <h3>Backstory</h3>
-            <div class="note-box p-3"></div>
-        </div>
-    </div>
-        <div class="row mt-2">
-        <div class="col-12">
-            <h3>Appearance</h3>
-            <div class="note-box p-3"></div>
-        </div>
-    </div>
-
-    <p class="mt-5 no-print text-center">
-        <a href="../../character_creation.html" class="text-decoration-none">&larr; Back to Step-by-Step Character Creation</a>
-    </p>
+    <div class="row mt-2"><div class="col-12"><h3>Notes</h3><div class="note-box"><textarea id="notes_main" rows="4"></textarea></div></div></div>
+    <div class="row mt-2"><div class="col-12"><h3>Backstory</h3><div class="note-box"><textarea id="notes_back" rows="4">Omega cannot remember her life before the lab. She is unsure if she was ever a child or if her life began as an adult subject. Raised by the Church of Singularity, she viewed the scientists as her only family; they experimented on her cosmic potential constantly but never with malice. Though their true goals remain a mystery to her, she has entered the world with a simple, driven purpose: she helps whoever she can, acting as the benevolent force she was raised to be.</textarea></div></div></div>
+    <div class="row mt-2"><div class="col-12"><h3>Appearance</h3><div class="note-box"><textarea id="notes_app" rows="4"></textarea></div></div></div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script>
+    function toggleDarkMode() {
+        const body = document.body;
+        const btn = document.getElementById('themeBtn');
+        body.classList.toggle('dark-mode');
+        if(btn) btn.innerText = body.classList.contains('dark-mode') ? "Light Mode" : "Dark Mode";
+        localStorage.setItem('singularity_darkMode', body.classList.contains('dark-mode'));
+    }
+
+    const allInputs = document.querySelectorAll('input, textarea');
+    allInputs.forEach(el => {
+        el.addEventListener('input', () => { if (el.id) localStorage.setItem('sheet_' + el.id, el.value); });
+    });
+
+    window.onload = () => {
+        allInputs.forEach(el => {
+            if (el.id) {
+                const val = localStorage.getItem('sheet_' + el.id);
+                if (el.id === 'hero_name' && (val === null || val === '')) {
+                    el.value = "Omega";
+                } else if (val !== null) {
+                    el.value = val;
+                }
+            }
+        });
+        if (localStorage.getItem('singularity_darkMode') === 'true') toggleDarkMode();
+    };
+
+    function clearSheet() {
+        if (confirm("Delete all data? This cannot be undone.")) {
+            allInputs.forEach(el => { 
+                if (el.id) { 
+                    localStorage.removeItem('sheet_' + el.id); 
+                }
+            });
+            location.reload();
+        }
+    }
+</script>
 </body>
 </html>
