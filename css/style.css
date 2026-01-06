@@ -487,3 +487,10 @@ hr {
     font-size: 1rem !important; /* Match standard text size */
     color: #b0b0b0 !important; /* Keep it silver/grey but distinct from purple */
 }
+
+/* Main Logo Styling */
+.main-logo {
+    width: 200px; /* Increased size */
+    max-width: 100%;
+    filter: drop-shadow(0 0 15px rgba(189, 95, 255, 0.4)); /* Subtle purple glow */
+}
