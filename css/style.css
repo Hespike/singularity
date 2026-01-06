@@ -484,6 +484,6 @@ hr {
 
 /* Fix "Return to" link styling to match other buttons */
 .lore-content p.text-center a.small {
-    font-size: 1.1rem !important; /* Increase size to match others */
+    font-size: 1rem !important; /* Match standard text size */
     color: #b0b0b0 !important; /* Keep it silver/grey but distinct from purple */
 }
