@@ -455,3 +455,18 @@ hr {
     color: #BD5FFF !important;
     text-shadow: 0 0 8px rgba(189, 95, 255, 0.5);
 }
+
+/* Navigation Footer Fixes */
+.lore-content .d-flex.justify-content-between {
+    flex-wrap: wrap; /* Prevents overlapping on small screens */
+    gap: 1rem;       /* Adds space between buttons when they wrap */
+}
+
+.hover-purple {
+    transition: all 0.3s ease;
+}
+
+.hover-purple:hover {
+    color: #d899ff !important;
+    text-shadow: 0 0 10px rgba(189, 95, 255, 0.8);
+}
