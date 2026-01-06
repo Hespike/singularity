@@ -1,44 +1,457 @@
 body {
-    background-image: url("../img/background.jpg");
+    background-color: #616163; /* Fallback */
+    background-image: linear-gradient(180deg, #1a1d29 0%, #0f1116 100%);
+    background-attachment: fixed;
+    color: #d1d1d1; /* Soft silver text so it's not harsh white */
+    
     font-family: FreeMono, monospace;
     text-align: justify;
     margin: 30px 30px;
 }
 
-table {
-    width: 100%;
+/* Add this to style.css */
+.cr-label {
+    color: #ffd700; /* Gold color - stands out great on dark backgrounds */
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    display: block;
 }
 
-table, th, td {
-    border:1px solid black;
+/* Make sure the list items don't look like "white blocks" */
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-ul {
-    margin-bottom: 0px;
+.list-group-item:hover {
+    background-color: rgba(189, 95, 255, 0.2); /* Your purple color on hover */
+    color: white;
 }
 
-h3 {
+/* 1. Make the Card itself dark and elegant */
+.card {
+    background-color: rgba(30, 33, 45, 0.9) !important; /* Deep dark blue-grey */
+    border: 1px solid #444 !important;
+    color: #e0e0e0 !important;
+}
+
+/* 2. Style the Card Header specifically */
+.card-header {
+    background-color: #0d0e12 !important;
+    border-bottom: 1px solid #BD5FFF !important; /* Purple accent line */
+    color: white !important;
+}
+
+/* 3. Fix the "Barely Visible" numbers and labels */
+.text-muted {
+    color: #a0aec0 !important; /* Brighter grey that's visible on dark backgrounds */
+}
+
+.h4, h4, h5 {
+    color: #ffffff !important; /* Force numbers and titles to pure white */
+}
+
+/* 4. Fix the borders between the stats (MGT, AGI, etc) */
+.border-end {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 1;
+}
+
+/* 5. Fix Links inside the card */
+.card-body a {
+    color: #BD5FFF !important; /* Your signature purple */
     text-decoration: underline;
 }
-p {
-    margin-bottom: 0px;
 
+.card-body a:hover {
+    color: #d899ff !important;
 }
 
-#strongerpunchButton {
-    background-color: red;
+/* Table Styles for Dark Theme */
+.table {
+    color: #e0e0e0 !important; /* Light text for table content */
+    background-color: rgba(255, 255, 255, 0.03); /* Very slight tint to the table area */
+}
+
+.table th, .table td {
+    border-color: rgba(255, 255, 255, 0.2) !important; /* Lighter, visible borders */
+    padding: 12px;
+}
+
+.table thead {
+    background-color: rgba(189, 95, 255, 0.1); /* Subtle purple tint for headers */
+}
+
+.table thead th {
+    color: #ffffff !important;
+    border-bottom: 2px solid #BD5FFF !important; /* Strong purple line under headers */
+}
+
+/* Striped rows for better readability */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Lore Page Specific Styling - Dark Mode Compatible */
+.lore-content {
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    color: #d1d1d1; /* Soft silver text */
+}
+
+.era-header {
+    border-bottom: 2px solid #BD5FFF;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.era-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #BD5FFF;
+    font-weight: bold;
+}
+
+.dropcap {
+    float: left;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-family: 'Times New Roman', serif;
+    color: #BD5FFF; /* Make the big letter purple to pop */
+}
+
+.sidebar-note {
+    font-family: 'Segoe UI', sans-serif;
+    font-style: italic;
+    border-left: 3px solid #BD5FFF; /* Purple border instead of grey */
+    padding-left: 15px;
+    margin: 20px 0;
+    color: #a0aec0; /* Lighter grey for the note */
+    background: rgba(189, 95, 255, 0.05); /* Very subtle purple tint */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Ensure links at the bottom are visible */
+.lore-content a {
+    color: #BD5FFF !important;
+}
+
+/* History Main Page Styling */
+.lore-header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/history_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(189, 95, 255, 0.3);
     color: white;
-    font-size: 16px;
-  }
-  
-  #strongerbodyButton {
-    background-color: blue;
-    color: white;
-    font-size: 16px;
-  }
-  
-  #textarea {
-    width: 200px;
-    height: 30px;
-    border: 1px solid black;
-  }
+    padding: 60px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* The base state of the card */
+.chapter-card {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-left: 5px solid #BD5FFF !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #e0e0e0 !important;
+    transition: all 0.3s ease;
+}
+
+/* The "Barely Visible" Fix: Hover State */
+.chapter-card:hover {
+    transform: translateX(10px);
+    /* Deep purple-tinted background so white text stays visible */
+    background-color: rgba(189, 95, 255, 0.15) !important; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    color: #ffffff !important;
+}
+
+/* Fixing the secondary text inside the cards */
+.chapter-card .text-muted {
+    color: #a0aec0 !important; /* Lighter grey for visibility */
+}
+
+.chapter-card:hover .text-muted {
+    color: #d899ff !important; /* Becomes light purple on hover */
+}
+
+/* Ensure the titles stay bright */
+.chapter-card h5 {
+    color: #ffffff;
+}
+
+/* Styling for the Section Labels (Powerblocs / Organizations) */
+.section-label {
+    display: block;
+    color: #BD5FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(189, 95, 255, 0.3);
+    width: fit-content;
+    padding-bottom: 5px;
+}
+
+/* Transforming the links into "Lore Buttons" */
+.btn-lore {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #BD5FFF; /* The Singularity accent */
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    text-decoration: none !important; /* Removes the underline */
+    transition: all 0.3s ease;
+    color: #ffffff !important;
+}
+
+.btn-lore:hover {
+    background-color: rgba(189, 95, 255, 0.1);
+    border-color: rgba(189, 95, 255, 0.5);
+    transform: translateX(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-lore div {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+/* Fixes the description text inside the buttons */
+.btn-lore .text-muted {
+    color: #a0aec0 !important;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.btn-lore:hover .text-muted {
+    color: #d899ff !important;
+}
+
+/* --- Lore History Page Styling --- */
+
+/* The Header Banner */
+.lore-header {
+    background: linear-gradient(rgba(18, 20, 29, 0.8), rgba(18, 20, 29, 0.8)), url('../img/history_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 60px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(189, 95, 255, 0.3); /* Subtle purple glow */
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* The Archivist's Note (Alert) */
+.alert-warning {
+    background-color: rgba(255, 193, 7, 0.05) !important;
+    border: 1px solid rgba(255, 193, 7, 0.3) !important;
+    color: #ffc107 !important;
+    border-left: 5px solid #ffc107 !important;
+    border-radius: 4px;
+}
+
+/* The Chapter Cards (Links) */
+.chapter-card {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    color: #e0e0e0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-left: 5px solid #BD5FFF !important; /* Purple accent */
+    margin-bottom: 10px;
+    transition: all 0.3s ease !important;
+}
+
+.chapter-card:hover {
+    transform: translateX(10px);
+    background-color: rgba(189, 95, 255, 0.1) !important; /* Purple hover tint */
+    border-color: rgba(189, 95, 255, 0.4) !important;
+    color: #ffffff !important;
+}
+
+/* Ensuring text inside cards is visible */
+.chapter-card .text-muted {
+    color: #a0aec0 !important;
+}
+
+.chapter-card h5 {
+    color: #BD5FFF;
+}
+
+/* Elegant Dark Table Styling */
+.table {
+    color: #e0e0e0 !important; /* Silver text */
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Header Styling - No more "Table Light" */
+.table thead th {
+    background-color: rgba(189, 95, 255, 0.15) !important; /* Subtle purple tint */
+    color: #ffffff !important;
+    border-bottom: 2px solid #BD5FFF !important; /* Bold purple separator */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px !important;
+}
+
+/* Row Styling */
+.table tbody td {
+    background-color: rgba(255, 255, 255, 0.02) !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+    padding: 12px !important;
+}
+
+/* Alternating Row Color for readability */
+.table tbody tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Remove those old manual border-dark classes from your CSS if they exist */
+.border-dark {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Centered Title with a Neon Glow */
+.main-title {
+    letter-spacing: 10px;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(189, 95, 255, 0.6);
+}
+
+/* Large Interactive Tiles */
+.home-tile {
+    display: block;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-decoration: none !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+}
+
+.home-tile:hover {
+    background: rgba(189, 95, 255, 0.1);
+    border-color: #BD5FFF;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.tile-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.home-tile h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.home-tile p {
+    color: #a0aec0;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Remove Bootstrap's default background on the container if needed */
+.container {
+    background: transparent !important;
+}
+
+/* Handbook Hub Styling */
+.main-title {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px rgba(189, 95, 255, 0.5);
+}
+
+.handbook-list {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.handbook-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    margin: 5px 0;
+    background: transparent;
+    border-radius: 8px;
+    color: #e0e0e0 !important;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+}
+
+.handbook-item:hover {
+    background: rgba(189, 95, 255, 0.1);
+    border: 1px solid rgba(189, 95, 255, 0.3);
+    color: #ffffff !important;
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Item ID (01, 02, etc) */
+.item-id {
+    font-family: 'Courier New', monospace;
+    color: #BD5FFF;
+    font-weight: bold;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.item-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    flex-grow: 1;
+}
+
+.item-arrow {
+    font-size: 1.2rem;
+    color: #BD5FFF;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.handbook-item:hover .item-arrow {
+    opacity: 1;
+    transform: translateX(10px);
+}
+
+/* Footer Link styling */
+.back-link {
+    color: #a0aec0 !important;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: #BD5FFF !important;
+    text-shadow: 0 0 8px rgba(189, 95, 255, 0.5);
+}
