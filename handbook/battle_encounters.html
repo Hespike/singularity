@@ -11,112 +11,89 @@
   </head>
 
   <body>
-    <div class="container mt-5">
-      <h1>4. Battle Encounters & Rules</h1>
-
-      <p>
-        Cases where two or more opposing parties engage in combat are called
-        battle encounters. Battle encounters consist of <strong>rounds</strong>.
-        A round is the time interval (usually 6 seconds) during which each
-        character performs various actions. When each character has finished
-        their round, a turn ends and a new one begins. These turns repeat as
-        long as the parties are actively fighting.
-      </p>
-
-      <hr />
-
-<h3 class="mt-4">Initiative</h3>
-      <p>
-        At the start of an encounter, every participant makes an <strong>Initiative Check</strong> to determine the turn order. This represents your hero's mental readiness and tactical awareness.
-      </p>
-
-      <div class="alert alert-secondary text-center py-2">
-        <strong>Initiative Formula:</strong> 1d20 + Wits Modifier + Any other modifiers
-      </div>
-
-      <p>
-        Any character may choose to reduce their initiative result at the start of battle (for example, to act after a teammate). This decision cannot be changed later and must be kept until the end of the encounter.
-      </p>
-
-      <hr />
-
-      <h3 class="mt-4">Energy and Actions</h3>
-      <ul>
-        <li>
-          At the start of their turn, each character receives
-          <strong>4 energy</strong>.
-        </li>
-        <li>
-          Characters may spend energy to perform any combination of actions,
-          such as moving, attacking, casting powers, or using items.
-        </li>
-        <li>
-          Each action has a specific energy cost, which is subtracted from the
-          character's total.
-        </li>
-        <li>
-          A character may spend their energy in any order they choose. They are
-          not required to spend all their energy and may skip actions entirely.
-        </li>
-      </ul>
-
-      <hr />
-
-      <h3 class="mt-4">Out of Combat Turns</h3>
-      <p>
-        In some cases, it may be justified for characters to move in turns
-        outside of combat, such as hiding during a heist or moving stealthily.
-        The The Architect decides whether turn-based tracking is necessary in these
-        situations.
-      </p>
-
-      <hr />
-
-      <div class="row mt-4">
-        <div class="col-md-6 mb-4">
-          <h4>Actions & States</h4>
-<div class="list-group">
-      <a href="battle_encounters/actions.html" class="list-group-item list-group-item-action">Actions</a>
-      
-      <a href="battle_encounters/statuses.html" class="list-group-item list-group-item-action">Statuses</a>
-    </div>
-  </div>
-
-        <div class="col-md-6 mb-4">
-          <h4>Combat Rules</h4>
-          <div class="list-group">
-            <a href="battle_encounters/cover.html" class="list-group-item list-group-item-action">Cover</a>
-            <a href="battle_encounters/critical_hit.html" class="list-group-item list-group-item-action">Critical Hit</a>
-            <a href="battle_encounters/damage_types.html" class="list-group-item list-group-item-action">Damage Types</a>
-            <a href="battle_encounters/disengaging_from_melee.html" class="list-group-item list-group-item-action">Disengaging from Melee</a>
-            <a href="battle_encounters/nat20.html" class="list-group-item list-group-item-action">Natural 20s</a>
-            <a href="battle_encounters/repeated_attack_penalty.html" class="list-group-item list-group-item-action">Repeated Attack Penalty (RAP)</a>
-            <a href="battle_encounters/restricted_ranged_combat.html" class="list-group-item list-group-item-action">Restricted Ranged Combat</a>
-            <a href="battle_encounters/size.html" class="list-group-item list-group-item-action">Size</a>
-            <a href="battle_encounters/spark.html" class="list-group-item list-group-item-action">Spark</a>
-            <a href="battle_encounters/wounds.html" class="list-group-item list-group-item-action">Wounds & Dying</a>
-          </div>
-        </div>
-      </div>
-
-<div class="d-flex justify-content-between mt-5">
-                <p>
-                    <a href="ability_scores.html" class="text-decoration-none">
-                        &larr; Back to Using Ability Scores
-                    </a>
-                </p>
-                <p>
-                    <a href="equipment.html" class="text-decoration-none">
-                        Next: Equipment &rarr;
-                    </a>
-                </p>
-            </div>
+    <div class="container mt-5 mb-5 lore-content">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
             
-            <p class="text-center mt-3">
-                <a href="player_handbook.html" class="small text-muted text-decoration-none">
-                    Return to Player's Handbook Main Page
-                </a>
+            <div class="era-header">
+                <h1 class="display-4 fw-bold">Battle Encounters & Rules</h1>
+            </div>
+
+            <p class="lead">
+                Cases where two or more opposing parties engage in combat are called
+                battle encounters. Battle encounters consist of <strong>rounds</strong>.
+                A round is the time interval (usually 6 seconds) during which each
+                character performs various actions. When each character has finished
+                their round, a turn ends and a new one begins. These turns repeat as
+                long as the parties are actively fighting.
             </p>
+
+            <hr class="border-purple opacity-25">
+
+            <h3 class="mt-4 text-purple">Initiative</h3>
+            <p>
+                At the start of an encounter, every participant makes an <strong>Initiative Check</strong> to determine the turn order. This represents your hero's mental readiness and tactical awareness.
+            </p>
+
+            <div class="initiative-box my-4">
+                <div class="formula-label">Initiative Formula</div>
+                <div class="formula-value">1d20 + Wits Modifier + Any other modifiers</div>
+            </div>
+
+            <p>
+                Any character may choose to reduce their initiative result at the start of battle (for example, to act after a teammate). This decision cannot be changed later and must be kept until the end of the encounter.
+            </p>
+
+            <hr class="border-purple opacity-25">
+
+            <h3 class="mt-4 text-purple">Energy and Actions</h3>
+            <ul class="custom-list">
+                <li>At the start of their turn, each character receives <strong>4 energy</strong>.</li>
+                <li>Characters may spend energy to perform any combination of actions, such as moving, attacking, casting powers, or using items.</li>
+                <li>Each action has a specific energy cost, which is subtracted from the character's total.</li>
+                <li>A character may spend their energy in any order they choose. They are not required to spend all their energy and may skip actions entirely.</li>
+            </ul>
+
+            <hr class="border-purple opacity-25">
+
+            <h3 class="mt-4 text-purple">Out of Combat Turns</h3>
+            <p>
+                In some cases, it may be justified for characters to move in turns
+                outside of combat, such as hiding during a heist or moving stealthily.
+                The The Architect decides whether turn-based tracking is necessary in these
+                situations.
+            </p>
+
+            <div class="row mt-5">
+                <div class="col-md-5 mb-4">
+                    <h4 class="section-label">Actions & States</h4>
+                    <div class="list-group">
+                        <a href="battle_encounters/actions.html" class="btn-lore py-2 mb-2">Actions</a>
+                        <a href="battle_encounters/statuses.html" class="btn-lore py-2 mb-2">Statuses</a>
+                    </div>
+                </div>
+
+                <div class="col-md-7 mb-4">
+                    <h4 class="section-label">Combat Rules</h4>
+                    <div class="row g-2">
+                        <div class="col-6"><a href="battle_encounters/cover.html" class="btn-lore small-text">Cover</a></div>
+                        <div class="col-6"><a href="battle_encounters/critical_hit.html" class="btn-lore small-text">Critical Hit</a></div>
+                        <div class="col-6"><a href="battle_encounters/damage_types.html" class="btn-lore small-text">Damage Types</a></div>
+                        <div class="col-6"><a href="battle_encounters/disengaging_from_melee.html" class="btn-lore small-text">Disengaging</a></div>
+                        <div class="col-6"><a href="battle_encounters/nat20.html" class="btn-lore small-text">Natural 20s</a></div>
+                        <div class="col-6"><a href="battle_encounters/repeated_attack_penalty.html" class="btn-lore small-text">Repeated Penalty</a></div>
+                        <div class="col-6"><a href="battle_encounters/restricted_ranged_combat.html" class="btn-lore small-text">Ranged Restrictions</a></div>
+                        <div class="col-6"><a href="battle_encounters/size.html" class="btn-lore small-text">Size</a></div>
+                        <div class="col-6"><a href="battle_encounters/spark.html" class="btn-lore small-text">Spark</a></div>
+                        <div class="col-6"><a href="battle_encounters/wounds.html" class="btn-lore small-text">Wounds & Dying</a></div>
+                    </div>
+                </div>
+            </div>
+
+<div class="d-flex justify-content-between mt-5 pt-4 border-top border-dark">
+                <a href="character_creation.html" class="text-decoration-none hover-purple">&larr; Back to Step-by-Step Character Creation</a>
+                <a href="player_handbook.html" class="text-decoration-none hover-purple">Return to Player's Handbook Main Page &rarr;</a>
+            </div>
 
 
     </div>
