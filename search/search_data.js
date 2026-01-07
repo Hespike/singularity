@@ -1,0 +1,129 @@
+const searchIndex = [
+    { title: "Introduction", url: "introduction.html", tags: "start, basics, what is singularity" },
+    { title: "Character Creation", url: "character_creation.html", tags: "step by step, hero, build" },
+    { title: "Battle Encounters", url: "battle_encounters.html", tags: "combat, rules, fight, turn" },
+    { title: "Ability Scores", url: "ability_scores.html", tags: "might, agility, endurance, wits, charm, skills" },
+    { title: "Equipment", url: "equipment.html", tags: "gear, weapons, armor, items" },
+    { title: "Talents", url: "character_creation/talents.html", tags: "feats, abilities, progression" },
+    
+    // Rules
+    { title: "Actions", url: "battle_encounters/actions.html", tags: "combat actions, move, attack" },
+    { title: "Statuses", url: "battle_encounters/statuses.html", tags: "conditions, blinded, prone" },
+    { title: "Damage Types", url: "battle_encounters/damage_types.html", tags: "fire, cold, kinetic, resistance" },
+    { title: "Wounds & Dying", url: "battle_encounters/wounds.html", tags: "death, injury, healing" },
+    { title: "Wound Table", url: "battle_encounters/wound_table.html", tags: "injury, damage, body parts, critical, extreme wound" },
+    { title: "Cover", url: "battle_encounters/cover.html", tags: "defense, obstacle, hide" },
+    { title: "Size", url: "battle_encounters/size.html", tags: "scale, large, tiny, stealth" },
+    { title: "Critical Hits", url: "battle_encounters/critical_hit.html", tags: "crit, double damage, extreme success" },
+    
+    // Powersets
+    { title: "Bastion", url: "character_creation/powersets/bastion.html", tags: "tank, defense, shield" },
+    { title: "Gadgeteer", url: "character_creation/powersets/gadgeteer.html", tags: "tech, devices, utility" },
+    { title: "Marksman", url: "character_creation/powersets/marksman.html", tags: "ranged, sniper, gun" },
+    { title: "Paragon", url: "character_creation/powersets/paragon.html", tags: "superman, flight, strength" },
+
+    // Phenotypes
+    { title: "Human", url: "character_creation/phenotypes/human.html", tags: "race, species, versatile" },
+    { title: "Terran", url: "character_creation/phenotypes/subtypes/terran.html", tags: "human subtype, earth" },
+
+    // Talents (Examples)
+    { title: "Bastion's Resistance", url: "character_creation/powersets/bastion/bastion_talents/bastions_resistance.html", tags: "bastion talent, damage reduction" },
+    { title: "Surgical Precision", url: "character_creation/powersets/marksman/marksman_talents/surgical_precision.html", tags: "marksman talent, wound" },
+    { title: "Deadeye", url: "character_creation/powersets/marksman/marksman_talents/deadeye.html", tags: "marksman talent, aim" },
+    { title: "Ironbound", url: "character_creation/powersets/bastion/bastion_talents/ironbound.html", tags: "bastion talent, hp, health" },
+    { title: "Tripoint Trauma", url: "character_creation/powersets/marksman/marksman_talents/tripoint_trauma.html", tags: "marksman talent, critical, wound" },
+    { title: "Increased Resistance", url: "character_creation/powersets/bastion/bastion_talents/increased_resistance.html", tags: "bastion talent, defense, resistance" },
+    { title: "Total Immunity", url: "character_creation/powersets/bastion/bastion_talents/total_immunity.html", tags: "bastion talent, immunity, defense" },
+    { title: "Blast", url: "character_creation/talents/blast.html", tags: "generic talent, attack, damage, energy" },
+    { title: "Generic Talent", url: "character_creation/talents.html", tags: "talents, list, feats, progression" },
+
+    // History & Lore
+    { title: "History of Humanity", url: "../history_of_humanity/history_of_humanity.html", tags: "lore, timeline, world, setting" },
+    { title: "Before the First Contact", url: "../history_of_humanity/chapters/before_the_fc.html", tags: "history, chapter 1, old earth" },
+    { title: "The First Contact", url: "../history_of_humanity/chapters/first_contact.html", tags: "history, chapter 2, strangers, singularium" },
+    { title: "The Age of Advancement", url: "../history_of_humanity/chapters/age_of_advancement.html", tags: "history, chapter 3, golden age" },
+    { title: "The Age of Division", url: "../history_of_humanity/chapters/age_of_division.html", tags: "history, chapter 4, war, conflict" },
+    { title: "Power Blocs & Organizations", url: "../history_of_humanity/chapters/nations&powerblocs.html", tags: "history, chapter 5, politics, factions" },
+    { title: "The Free States of Terra", url: "../history_of_humanity/chapters/powerblocs/free_states_of_terra.html", tags: "faction, fst, democracy, corporation" },
+    { title: "Grand Principality of Varysk", url: "../history_of_humanity/chapters/powerblocs/varysk.html", tags: "faction, varysk, iron, anti-tech" },
+    { title: "The Church of Singularity", url: "../history_of_humanity/chapters/organizations/church_of_singularity.html", tags: "faction, religion, tech, research" },
+
+    // Minions & Villains
+    { title: "Minions & Villains", url: "../minions&villains/minions&villains.html", tags: "enemies, npcs, monsters, bestiary" },
+    { title: "Thug", url: "../minions&villains/minions/thug.html", tags: "enemy, minion, criminal, low level" },
+    { title: "Soldier", url: "../minions&villains/minions/soldier.html", tags: "enemy, minion, military, guard" },
+
+    // Backgrounds
+    { title: "Backgrounds", url: "character_creation/backgrounds.html", tags: "origin, backstory, skills" },
+    { title: "Athlete", url: "character_creation/backgrounds/athlete.html", tags: "background, physical, sports" },
+    { title: "Criminal", url: "character_creation/backgrounds/criminal.html", tags: "background, stealth, underworld" },
+    { title: "Journalist", url: "character_creation/backgrounds/journalist.html", tags: "background, social, investigation" },
+    { title: "Tech Enthusiast", url: "character_creation/backgrounds/tech_enthusiast.html", tags: "background, computers, hacking" },
+
+    // Gadgets (Gadgeteer)
+    { title: "Gadgets", url: "character_creation/powersets/gadgeteer/gadgets.html", tags: "tech, items, devices" },
+    { title: "Liquid Foam Spray", url: "character_creation/powersets/gadgeteer/gadgets/liquid_foam_spray.html", tags: "gadget, crowd control, difficult terrain" },
+    { title: "Magnetic Grapnel", url: "character_creation/powersets/gadgeteer/gadgets/magnetic_grapnel.html", tags: "gadget, movement, grapple" },
+    { title: "Micro-Missile Launcher", url: "character_creation/powersets/gadgeteer/gadgets/micro_missile_launcher.html", tags: "gadget, attack, fire" },
+    { title: "Photon Projector", url: "character_creation/powersets/gadgeteer/gadgets/photon_projector.html", tags: "gadget, light, utility" },
+    { title: "Support Drone", url: "character_creation/powersets/gadgeteer/gadgets/support_drone.html", tags: "gadget, buff, ally" },
+    { title: "Remote Med-Siphon", url: "character_creation/powersets/gadgeteer/gadgets/remote_med_siphon.html", tags: "gadget, healing, range" },
+    { title: "Sonic Grenade", url: "character_creation/powersets/gadgeteer/gadgets/sonic_grenade.html", tags: "gadget, aoe, stun, daze" },
+    { title: "Trauma Stabilizer", url: "character_creation/powersets/gadgeteer/gadgets/trauma_stabilizer.html", tags: "gadget, healing, touch" },
+    { title: "Enough Prep Time", url: "character_creation/powersets/gadgeteer/gadgeteer_talents/enough_prep_time.html", tags: "gadgeteer talent, planning, bonus" },
+    { title: "Expanded Loadout", url: "character_creation/powersets/gadgeteer/gadgeteer_talents/expanded_loadout.html", tags: "gadgeteer talent, slots, preparation" },
+    { title: "Improvised Gadget", url: "character_creation/powersets/gadgeteer/gadgeteer_talents/improvised_gadget.html", tags: "gadgeteer talent, create, random" },
+
+    // Paragon Talents
+    { title: "Dominating Presence", url: "character_creation/powersets/paragon/paragon_talents/dominating_presence.html", tags: "paragon talent, intimidation, flight" },
+    { title: "Impact Control", url: "character_creation/powersets/paragon/paragon_talents/impact_control.html", tags: "paragon talent, fall damage, resistance" },
+
+    // Generic Talents
+    { title: "Armor Training", url: "character_creation/talents.html", tags: "light, medium, heavy, armor proficiency" },
+    { title: "Weapon Training", url: "character_creation/talents.html", tags: "apprentice, competent, masterful, legendary, weapon proficiency" },
+    { title: "Saving Throw Training", url: "character_creation/talents.html", tags: "apprentice, competent, masterful, legendary, saves" },
+    { title: "Skill Training", url: "character_creation/talents.html", tags: "apprentice, competent, masterful, legendary, skills" },
+    { title: "Hard to Kill", url: "character_creation/talents/hard_to_kill.html", tags: "generic talent, health, wounds, death" },
+    { title: "Initiative Training", url: "character_creation/talents/initiative_training_apprentice.html", tags: "generic talent, speed, reaction" },
+    { title: "Marine Training", url: "character_creation/talents/marine_training.html", tags: "generic talent, water, aquatic, swimming" },
+    { title: "Swift Runner", url: "character_creation/talents/swift_runner.html", tags: "generic talent, speed, movement" },
+
+    // Actions & Statuses
+    { title: "Analyze", url: "battle_encounters/actions/analyze.html", tags: "action, wits, investigate" },
+    { title: "Attack", url: "battle_encounters/actions/attack.html", tags: "action, combat, strike" },
+    { title: "Blast Action", url: "battle_encounters/actions/blast_action.html", tags: "action, ranged, energy" },
+    { title: "Brace", url: "battle_encounters/actions/brace.html", tags: "action, defense, ac" },
+    { title: "Draw", url: "battle_encounters/actions/draw.html", tags: "action, equip, item" },
+    { title: "Drop", url: "battle_encounters/actions/drop.html", tags: "action, free, item" },
+    { title: "Move", url: "battle_encounters/actions/move.html", tags: "action, movement, speed" },
+    { title: "Reposition", url: "battle_encounters/actions/reposition.html", tags: "action, shove, push" },
+    { title: "Stand Up", url: "battle_encounters/actions/standup.html", tags: "action, prone, get up" },
+    { title: "Step", url: "battle_encounters/actions/step.html", tags: "action, movement, shift" },
+    { title: "Stow", url: "battle_encounters/actions/stow.html", tags: "action, inventory, hide" },
+    { title: "Trip", url: "battle_encounters/actions/trip.html", tags: "action, knock down, prone" },
+    { title: "Blinded", url: "battle_encounters/statuses/blinded.html", tags: "status, condition, sight" },
+    { title: "Dazed", url: "battle_encounters/statuses/dazed.html", tags: "status, condition, reaction" },
+    { title: "Deafened", url: "battle_encounters/statuses/deafened.html", tags: "status, condition, hearing" },
+    { title: "Off-balance", url: "battle_encounters/statuses/offbalance.html", tags: "status, condition, ac penalty" },
+    { title: "Prone", url: "battle_encounters/statuses/prone.html", tags: "status, condition, ground" },
+    { title: "Staggered", url: "battle_encounters/statuses/staggered.html", tags: "status, condition, energy" },
+    { title: "Untrained Armor", url: "battle_encounters/untrained_armor.html", tags: "rules, penalty, ac" },
+    { title: "Repeated Attack Penalty", url: "battle_encounters/repeated_attack_penalty.html", tags: "rules, rap, multiattack" },
+    { title: "Restricted Ranged Combat", url: "battle_encounters/restricted_ranged_combat.html", tags: "rules, flying, climbing, shooting" },
+    { title: "Spark", url: "battle_encounters/spark.html", tags: "rules, hero point, reroll, inspiration" },
+    { title: "Disengaging", url: "battle_encounters/disengaging_from_melee.html", tags: "rules, movement, retreat" },
+
+    // Equipment
+    { title: "Combat Knife", url: "equipment/weapons/combat_knife.html", tags: "weapon, melee, light" },
+    { title: "Greatsword", url: "equipment/weapons/greatsword.html", tags: "weapon, melee, heavy, two-handed" },
+    { title: "Pistol", url: "equipment/weapons/pistol.html", tags: "weapon, ranged, firearm" },
+    { title: "Rifle", url: "equipment/weapons/rifle.html", tags: "weapon, ranged, firearm, long range" },
+    { title: "Short Bow", url: "equipment/weapons/short_bow.html", tags: "weapon, ranged, bow" },
+    { title: "Shortsword", url: "equipment/weapons/shortsword.html", tags: "weapon, melee" },
+    { title: "Unarmed Strike", url: "equipment/weapons/unarmed_strike.html", tags: "weapon, melee, fist" },
+    { title: "Jacket", url: "equipment/armors/jacket.html", tags: "armor, light" },
+    { title: "Combat Vest", url: "equipment/armors/combat_vest.html", tags: "armor, medium" },
+    { title: "Plated Assault Armor", url: "equipment/armors/plated_assault_armor.html", tags: "armor, heavy" },
+    { title: "Weapon Traits", url: "equipment/weapon_traits.html", tags: "rules, equipment, properties" },
+    { title: "Armor Traits", url: "equipment/armor_traits.html", tags: "rules, equipment, properties" }
+];

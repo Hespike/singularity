@@ -6,7 +6,8 @@ body {
     
     font-family: FreeMono, monospace;
     text-align: justify;
-    margin: 30px 30px;
+    margin: 0;
+    padding-top: 80px;
 }
 
 /* Add this to style.css */
