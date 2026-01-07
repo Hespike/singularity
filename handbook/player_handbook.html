@@ -25,6 +25,16 @@
         </p>
     </div>
 
+    <!-- Search Bar Section -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-6">
+            <div class="position-relative">
+                <input type="text" id="searchInput" class="form-control form-control-lg bg-dark text-light border-secondary" placeholder="Search the handbook (e.g., 'Combat', 'Bastion', 'Wounds')...">
+                <div id="searchResults" class="list-group position-absolute w-100 mt-1" style="z-index: 1000; display: none; max-height: 300px; overflow-y: auto;"></div>
+            </div>
+        </div>
+    </div>
+
     <div class="row justify-content-center">
         <div class="col-lg-8">
             <div class="handbook-list">
@@ -61,5 +71,8 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <!-- Search Scripts -->
+    <script src="search/search_data.js"></script>
+    <script src="search/search_logic.js"></script>
   </body>
 </html>
