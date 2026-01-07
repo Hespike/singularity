@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSearchContent">
                 <div class="d-flex position-relative mt-3 mt-lg-0" style="width: 100%; max-width: 400px;">
-                    <input class="form-control bg-dark text-light border-secondary" type="search" id="searchInput" placeholder="Search the Handbook" aria-label="Search">
+                    <input class="form-control bg-dark text-light border-secondary" type="search" id="searchInput" placeholder="Search the entire page" aria-label="Search">
                     <div id="searchResults" class="list-group position-absolute w-100 mt-1" style="top: 100%; z-index: 1000; display: none; max-height: 300px; overflow-y: auto; box-shadow: 0 10px 20px rgba(0,0,0,0.8);"></div>
                 </div>
             </div>

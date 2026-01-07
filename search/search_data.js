@@ -91,7 +91,6 @@ const searchIndex = [
     // Actions & Statuses
     { title: "Analyze", url: "battle_encounters/actions/analyze.html", tags: "action, wits, investigate" },
     { title: "Attack", url: "battle_encounters/actions/attack.html", tags: "action, combat, strike" },
-    { title: "Blast Action", url: "battle_encounters/actions/blast_action.html", tags: "action, ranged, energy" },
     { title: "Brace", url: "battle_encounters/actions/brace.html", tags: "action, defense, ac" },
     { title: "Draw", url: "battle_encounters/actions/draw.html", tags: "action, equip, item" },
     { title: "Drop", url: "battle_encounters/actions/drop.html", tags: "action, free, item" },
