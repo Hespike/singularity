@@ -84,6 +84,7 @@ hr {
 .table th, .table td {
     border-color: rgba(255, 255, 255, 0.2) !important; /* Lighter, visible borders */
     padding: 12px;
+    color: #e0e0e0 !important;
 }
 
 .table thead {
