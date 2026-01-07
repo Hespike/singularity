@@ -220,6 +220,7 @@ hr {
     text-decoration: none !important; /* Removes the underline */
     transition: all 0.3s ease;
     color: #ffffff !important;
+    font-size: 1.1rem;
 }
 
 .btn-lore:hover {
