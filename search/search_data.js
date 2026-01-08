@@ -34,6 +34,7 @@ const searchIndex = [
     { title: "Tripoint Trauma", url: "character_creation/powersets/marksman/marksman_talents/tripoint_trauma.html", tags: "marksman talent, critical, wound" },
     { title: "Increased Resistance", url: "character_creation/powersets/bastion/bastion_talents/increased_resistance.html", tags: "bastion talent, defense, resistance" },
     { title: "Total Immunity", url: "character_creation/powersets/bastion/bastion_talents/total_immunity.html", tags: "bastion talent, immunity, defense" },
+    { title: "Protect the Weak", url: "character_creation/powersets/bastion/bastion_talents/protect_the_weak.html", tags: "bastion talent, defense, protection, penalty" },
     { title: "Blast", url: "character_creation/talents/blast.html", tags: "generic talent, attack, damage, energy" },
     { title: "Generic Talent", url: "character_creation/talents.html", tags: "talents, list, feats, progression" },
 
