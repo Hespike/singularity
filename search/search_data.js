@@ -77,6 +77,9 @@ const searchIndex = [
     // Paragon Talents
     { title: "Dominating Presence", url: "character_creation/powersets/paragon/paragon_talents/dominating_presence.html", tags: "paragon talent, intimidation, flight" },
     { title: "Impact Control", url: "character_creation/powersets/paragon/paragon_talents/impact_control.html", tags: "paragon talent, fall damage, resistance" },
+    { title: "Noble Presence", url: "character_creation/powersets/paragon/paragon_talents/noble_presence.html", tags: "paragon talent, persuasion, flight" },
+    { title: "Supersonic Moment", url: "character_creation/powersets/paragon/paragon_talents/supersonic_moment.html", tags: "paragon talent, damage, flight, speed, melee" },
+    { title: "Meteor Slam", url: "character_creation/powersets/paragon/paragon_talents/meteor_slam.html", tags: "paragon talent, flight, slam, prone, falling damage" },
 
     // Generic Talents
     { title: "Armor Training", url: "character_creation/talents.html", tags: "light, medium, heavy, armor proficiency" },
