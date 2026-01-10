@@ -13,6 +13,13 @@
 
 <body>
 <div class="container mt-5">
+    <h2 class="mb-3">Soldier</h2>
+    <p class="mb-3">
+        Soldiers are trained military personnel or professional mercenaries with proper combat training and equipment. 
+        They represent a significant threat, capable of coordinated tactics and effective use of firearms and armor. 
+        Often serving as guards, military units, or elite security forces, these combatants have experience in real combat 
+        situations and know how to work together to achieve tactical objectives.
+    </p>
     <div class="card border-dark">
         <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
             <h2 class="mb-0">Soldier</h2>
@@ -22,7 +29,8 @@
             <div class="row text-center mb-3">
     <div class="col-4 border-end">
         <h5 class="mb-0 text-muted small">HIT POINTS</h5>
-        <div class="h4">15</div>
+        <div class="h4" id="hp-display" contenteditable="true" style="cursor: text; outline: none;">15</div>
+        <small class="text-muted">(Click to edit)</small>
     </div>
     <div class="col-4 border-end">
         <h5 class="mb-0 text-muted small">ARMOR CLASS</h5>
@@ -55,13 +63,18 @@
                         <a href="../../handbook/equipment/weapons/rifle.html" class="text-decoration-none text-primary">Rifle</a>:
                     </strong><br>
                     <em>Attack:</em> 1d20 + 7 (4 from Apprentice + 3 from Agility)<br>
-                    <em>Damage:</em> 1d6 + 3 (Agility)
+                    <em>Damage:</em> 1d6 + 3 (Agility) (<a href="../../handbook/battle_encounters/damage_types.html" class="text-decoration-none text-primary">kinetic</a>)
                 </p>
             </div>
 
             <h4 class="mt-3">Special Abilities</h4>
             <ul>
                 <li><strong>Trained with Medium Armor:</strong> The soldier suffers no penalties while wearing medium armor.</li>
+            </ul>
+
+            <h4 class="mt-3">Traits</h4>
+            <ul>
+                <li><strong><a href="../../handbook/battle_encounters/traits/living.html" class="text-decoration-none text-primary">Living</a></strong></li>
             </ul>
 
             <h4 class="mt-3">Skills</h4>
@@ -86,5 +99,28 @@
 <!-- Search Scripts -->
 <script src="../../search/search_data.js"></script>
 <script src="../../search/search_logic.js"></script>
+<script>
+    // Store original HP value and reset on page load
+    (function() {
+        const hpDisplay = document.getElementById('hp-display');
+        const originalHP = '15';
+        
+        // Reset to original value on page load
+        hpDisplay.textContent = originalHP;
+        
+        // Allow only numbers when editing
+        hpDisplay.addEventListener('input', function(e) {
+            this.textContent = this.textContent.replace(/[^0-9]/g, '');
+        });
+        
+        // Prevent line breaks
+        hpDisplay.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                this.blur();
+            }
+        });
+    })();
+</script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Omega - Singularity Interactive Sheet</title>
+    <title>Vanguard - Singularity Interactive Sheet</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <style>
         body { transition: background-color 0.3s, color 0.3s; }
@@ -63,25 +63,25 @@
     </div>
 
     <div class="hero-header w-100 mb-4">
-        <img src="../../../img/Omega.jpg" alt="Omega" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; border: 2px solid #000; background: #eee;" class="me-2">
+        <img src="../../../img/vanguard.jpg" alt="Vanguard" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; border: 2px solid #000; background: #eee;" class="me-2">
         <div class="flex-grow-1">
             <h1>Hero:</h1>
-            <input type="text" id="hero_name" value="Omega">
+            <input type="text" id="hero_name" value="Vanguard">
         </div>
     </div>
 
     <div class="row mb-4">
         <div class="col-md-6 border-end">
-            <div class="info-row"><span class="info-label">Real Name:</span> <input type="text" id="real_name" value=""></div>
+            <div class="info-row"><span class="info-label">Real Name:</span> <input type="text" id="real_name" value="Cassidy Miller"></div>
             <div class="info-row"><span class="info-label">Phenotype / Subtype:</span> <input type="text" id="phenotype" value="Human / Terran"></div>
-            <div class="info-row"><span class="info-label">Powerset:</span> <input type="text" id="powerset" value="Paragon"></div>
+            <div class="info-row"><span class="info-label">Powerset:</span> <input type="text" id="powerset" value="Bastion"></div>
         </div>
         <div class="col-md-6">
-            <div class="info-row"><span class="info-label">Background:</span> <input type="text" id="background" value="Athlete"></div>
+            <div class="info-row"><span class="info-label">Background:</span> <input type="text" id="background" value="Military"></div>
             <div class="row g-2">
                 <div class="col-4"><div class="info-row"><span class="info-label">Level:</span> <input type="text" id="level" value="1"></div></div>
                 <div class="col-4"><div class="info-row"><span class="info-label">Size:</span> <input type="text" id="size" value="Medium"></div></div>
-                <div class="col-4"><div class="info-row"><span class="info-label">Speed:</span> <input type="text" id="speed" value="25ft (15ft Fly)"></div></div>
+                <div class="col-4"><div class="info-row"><span class="info-label">Speed:</span> <input type="text" id="speed" value="25ft"></div></div>
             </div>
         </div>
     </div>
@@ -92,9 +92,9 @@
                 <div class="card-header bg-dark text-white fw-bold">Vitality & Defense</div>
                 <div class="card-body">
                     <div class="row align-items-center">
-                        <div class="col-4"><small class="text-muted d-block">MAX HP</small><input type="text" id="max_hp" class="h3 text-center w-100" value="15"></div>
-                        <div class="col-4"><small class="text-muted d-block">CURRENT</small><div class="hp-box"><input type="text" id="curr_hp" class="w-100" value="15"></div></div>
-                        <div class="col-4"><small class="text-muted d-block">AC</small><input type="text" id="ac_val" class="h3 text-center w-100" value="12"></div>
+                        <div class="col-4"><small class="text-muted d-block">MAX HP</small><input type="text" id="max_hp" class="h3 text-center w-100" value="18"></div>
+                        <div class="col-4"><small class="text-muted d-block">CURRENT</small><div class="hp-box"><input type="text" id="curr_hp" class="w-100" value="18"></div></div>
+                        <div class="col-4"><small class="text-muted d-block">AC</small><input type="text" id="ac_val" class="h3 text-center w-100" value="17"></div>
                     </div>
                 </div>
             </div>
@@ -106,8 +106,8 @@
                     <div class="row mb-2 g-1">
                         <div class="col-6 text-center border-end">
                             <small class="text-muted d-block">WOUND LIMIT</small>
-                            <div class="h5 mb-0">4</div>
-                            <small class="text-muted">(3 + 1 END)</small>
+                            <div class="h5 mb-0">7</div>
+                            <small class="text-muted">(3 + 2 END + 2 Hard to Kill)</small>
                         </div>
                         <div class="col-6 text-center">
                             <small class="text-muted d-block">CURRENT WOUNDS</small>
@@ -126,11 +126,11 @@
     </div>
 
     <div class="row g-0 mb-5">
-        <div class="col"><div class="stat-box"><div class="small fw-bold">MIGHT</div><div class="stat-value"><input type="text" id="stat_might" value="+3"></div></div></div>
-        <div class="col"><div class="stat-box"><div class="small fw-bold">AGILITY</div><div class="stat-value"><input type="text" id="stat_agility" value="+2"></div></div></div>
-        <div class="col"><div class="stat-box"><div class="small fw-bold">ENDURANCE</div><div class="stat-value"><input type="text" id="stat_end" value="+1"></div></div></div>
-        <div class="col"><div class="stat-box"><div class="small fw-bold">WITS</div><div class="stat-value"><input type="text" id="stat_wits" value="+0"></div></div></div>
-        <div class="col"><div class="stat-box"><div class="small fw-bold">CHARM</div><div class="stat-value"><input type="text" id="stat_charm" value="+1"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">MIGHT</div><div class="stat-value"><input type="text" id="stat_might" value="+2"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">AGILITY</div><div class="stat-value"><input type="text" id="stat_agility" value="+1"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">ENDURANCE</div><div class="stat-value"><input type="text" id="stat_end" value="+2"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">WITS</div><div class="stat-value"><input type="text" id="stat_wits" value="+1"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">CHARM</div><div class="stat-value"><input type="text" id="stat_charm" value="+0"></div></div></div>
     </div>
 
     <div class="row">
@@ -139,8 +139,8 @@
             <table class="table table-bordered table-sm mb-4">
                 <thead class="table-light"><tr><th>Name</th><th>Ability</th><th>Training</th></tr></thead>
                 <tbody>
-                    <tr><td><input type="text" id="sk_n_1" value="Athletics"></td><td><input type="text" id="sk_a_1" value="Might"></td><td><input type="text" id="sk_t_1" value="Apprentice"></td></tr>
-                    <tr><td><input type="text" id="sk_n_2" value="Acrobatics"></td><td><input type="text" id="sk_a_2" value="Agility"></td><td><input type="text" id="sk_t_2" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_1" value="Survival"></td><td><input type="text" id="sk_a_1" value="Wits"></td><td><input type="text" id="sk_t_1" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_2" value="Endurance Saves"></td><td><input type="text" id="sk_a_2" value="Endurance"></td><td><input type="text" id="sk_t_2" value="Apprentice"></td></tr>
                     <tr><td><input type="text" id="sk_n_3"></td><td><input type="text" id="sk_a_3"></td><td><input type="text" id="sk_t_3"></td></tr>
                     <tr><td><input type="text" id="sk_n_4"></td><td><input type="text" id="sk_a_4"></td><td><input type="text" id="sk_t_4"></td></tr>
                     <tr><td><input type="text" id="sk_n_5"></td><td><input type="text" id="sk_a_5"></td><td><input type="text" id="sk_t_5"></td></tr>
@@ -150,11 +150,11 @@
             <table class="table table-bordered table-sm mb-4">
                 <thead class="table-light"><tr><th style="width: 30%;">Name</th><th style="width: 70%;">Effect</th></tr></thead>
                 <tbody>
-                    <tr><td><input type="text" id="p_n_1" value="Cosmic Blast"></td><td><input type="text" id="p_e_1" value="30ft Ranged, +7 Hit (4 Apprentice + 3 Might), 1d4+3 Chaos (2 Energy)"></td></tr>
-                    <tr><td><input type="text" id="p_n_2" value="Unarmed Strike"></td><td><input type="text" id="p_e_2" value="Melee, 1d4+3 Kinetic"></td></tr>
-                    <tr><td><input type="text" id="p_n_3" value="Flight"></td><td><input type="text" id="p_e_3" value="Flying speed 15 feet"></td></tr>
-                    <tr><td><input type="text" id="p_n_4" value="Impact Control"></td><td><input type="text" id="p_e_4" value="Half damage from falling"></td></tr>
-                    <tr><td><input type="text" id="p_n_5" value="Enhanced Vitality"></td><td><input type="text" id="p_e_5" value="+2 Max HP per Prime Level"></td></tr>
+                    <tr><td><input type="text" id="p_n_1" value="Unarmed Strike"></td><td><input type="text" id="p_e_1" value="Melee, +6 Hit (4 Apprentice + 2 Might), 1d2+2 Kinetic (1 Energy)"></td></tr>
+                    <tr><td><input type="text" id="p_n_2" value="Hard to Kill"></td><td><input type="text" id="p_e_2" value="Increase Wound Limit by 2"></td></tr>
+                    <tr><td><input type="text" id="p_n_3"></td><td><input type="text" id="p_e_3"></td></tr>
+                    <tr><td><input type="text" id="p_n_4"></td><td><input type="text" id="p_e_4"></td></tr>
+                    <tr><td><input type="text" id="p_n_5"></td><td><input type="text" id="p_e_5"></td></tr>
                 </tbody>
             </table>
         </div>
@@ -162,22 +162,22 @@
             <div class="card mb-3 border-success">
                 <div class="card-header bg-success text-white d-flex justify-content-between align-items-center py-1 fw-bold">
                     <span class="small">Available Funds</span>
-                    <span class="d-flex align-items-center"><input type="text" id="credits" class="text-white text-end me-1" style="width: 80px;" value="10"> Credits</span>
+                    <span class="d-flex align-items-center"><input type="text" id="credits" class="text-white text-end me-1" style="width: 80px;" value="4"> Credits</span>
                 </div>
             </div>
             <div class="card mb-4">
                 <div class="card-header bg-secondary text-white fw-bold">Inventory</div>
-                <div class="card-body p-0"><textarea id="inv_box" rows="6" placeholder="List items..."></textarea></div>
+                <div class="card-body p-0"><textarea id="inv_box" rows="6" placeholder="List items...">Combat Vest (6 credits)</textarea></div>
             </div>
             <h3>Progression</h3>
             <table class="table table-sm table-bordered">
                 <thead class="table-light"><tr><th style="width: 30%;">Source</th><th style="width: 70%;">Effect</th></tr></thead>
                 <tbody>
-                    <tr><td><input type="text" id="pr_s_1" value="Phenotype"></td><td><input type="text" id="pr_e_1" value="+1 Might, Blast Talent (Chaos/Might)"></td></tr>
-                    <tr><td><input type="text" id="pr_s_2" value="Subtype"></td><td><input type="text" id="pr_e_2" value="+1 Agility, Enhanced Vitality Talent"></td></tr>
-                    <tr><td><input type="text" id="pr_s_3" value="Powerset"></td><td><input type="text" id="pr_e_3" value="+1 Might (inherent), +2 Ability Boost (+1 END, +1 CHA), Athletics Apprentice, Flight 15ft, Enhanced Unarmed (1d2→1d4)"></td></tr>
-                    <tr><td><input type="text" id="pr_s_4" value="Background"></td><td><input type="text" id="pr_e_4" value="+1 Agility, Acrobatics Apprentice"></td></tr>
-                    <tr><td><input type="text" id="pr_s_5" value="Paragon Talent"></td><td><input type="text" id="pr_e_5" value="Impact Control"></td></tr>
+                    <tr><td><input type="text" id="pr_s_1" value="Phenotype"></td><td><input type="text" id="pr_e_1" value="+1 Might, Weapon Training (Apprentice) - Unarmed Strikes"></td></tr>
+                    <tr><td><input type="text" id="pr_s_2" value="Subtype"></td><td><input type="text" id="pr_e_2" value="+1 Endurance, Hard to Kill Talent"></td></tr>
+                    <tr><td><input type="text" id="pr_s_3" value="Powerset"></td><td><input type="text" id="pr_e_3" value="+1 End, +2 Ability Boost (+1 MGT, +1 AGI), Heavy Armor Training, +2 AC, Endurance Saves Apprentice"></td></tr>
+                    <tr><td><input type="text" id="pr_s_4" value="Background"></td><td><input type="text" id="pr_e_4" value="+1 Wits, Survival (Wits) Apprentice"></td></tr>
+                    <tr><td><input type="text" id="pr_s_5" value="Bastion Talent"></td><td><input type="text" id="pr_e_5" value="Ironbound"></td></tr>
                     <tr><td><input type="text" id="pr_s_6"></td><td><input type="text" id="pr_e_6"></td></tr>
                     <tr><td><input type="text" id="pr_s_7"></td><td><input type="text" id="pr_e_7"></td></tr>
                     <tr><td><input type="text" id="pr_s_8"></td><td><input type="text" id="pr_e_8"></td></tr>
@@ -188,7 +188,13 @@
         </div>
     </div>
     <div class="row mt-2"><div class="col-12"><h3>Notes</h3><div class="note-box"><textarea id="notes_main" rows="4"></textarea></div></div></div>
-    <div class="row mt-2"><div class="col-12"><h3>Backstory</h3><div class="note-box"><textarea id="notes_back" rows="4">Omega cannot remember her life before the lab. She is unsure if she was ever a child or if her life began as an adult subject. Raised by the Church of Singularity, she viewed the scientists as her only family; they experimented on her cosmic potential constantly but never with malice. Though their true goals remain a mystery to her, she has entered the world with a simple, driven purpose: she helps whoever she can, acting as the benevolent force she was raised to be.</textarea></div></div></div>
+    <div class="row mt-2"><div class="col-12"><h3>Backstory</h3><div class="note-box"><textarea id="notes_back" rows="4">Cassidy Miller was born in the Dust Belts, struggling agricultural states on the Terra frontiers. Her father, a structural welder, taught her that anything can be fixed with enough heat and a steady hand.
+
+When local syndicates began shaking down workers, a teenage Cassidy fashioned crude armor from welding equipment and hull-plating scraps. She became a nightmare for bullies and debt collectors, earning a reputation as an "unmovable object."
+
+She joined the Free States Army to protect more than just her neighborhood. During the Varysk Campaign, her true power revealed itself when her unit was pinned in a collapsing spire. While the building crumbled around them, Cassidy anchored herself and held the structural supports together with her bare hands, allowing her squad to evacuate. She walked out of the rubble carrying her commanding officer, her enhanced durability and strength fully awakened for the first time.
+
+The government tried to market her as "Lady Liberty" in a flashy spandex suit, but Cassidy refused. She dropped her combat boots on the General's desk and declared, "I'm a soldier, not a mascot." They compromised on "Vanguard"—a name honoring her position at the front of every charge.</textarea></div></div></div>
     <div class="row mt-2"><div class="col-12"><h3>Appearance</h3><div class="note-box"><textarea id="notes_app" rows="4"></textarea></div></div></div>
 
     <p class="mt-5 no-print text-center">
@@ -197,8 +203,8 @@
 </div>
 
 <script>
-    // UNIQUE PREFIX FOR OMEGA
-    const sheetPrefix = 'omega_';
+    // UNIQUE PREFIX FOR VANGUARD
+    const sheetPrefix = 'vanguard_';
 
     function toggleDarkMode() {
         const body = document.body;
@@ -219,9 +225,9 @@
         allInputs.forEach(el => {
             if (el.id) {
                 const val = localStorage.getItem(sheetPrefix + el.id);
-                // Handle default for Omega if no save exists
+                // Handle default for Vanguard if no save exists
                 if (el.id === 'hero_name' && (val === null || val === '')) {
-                    el.value = "Omega";
+                    el.value = "Vanguard";
                 } else if (val !== null) {
                     el.value = val;
                 }

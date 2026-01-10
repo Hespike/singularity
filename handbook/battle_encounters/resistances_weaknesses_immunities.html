@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resistances, Weaknesses & Immunities | Singularity Player's Handbook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../../img/infinitylogo.png">
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="singularityttrpg" data-description="Support me on Buy me a coffee!" data-message="" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+</head>
+
+<body>
+<div class="container mt-5">
+    <h1>Resistances, Weaknesses & Immunities</h1>
+    
+    <p class="mt-3">Damage reduces <strong>HP (Hit Points)</strong>. When a creature is dealt damage, apply the following modifiers based on their properties. These modifiers reflect a creature's natural defenses, vulnerabilities, or special adaptations to specific types of harm.</p>
+
+    <div class="card mb-4 mt-4">
+        <div class="card-header bg-dark text-white">
+            <h4 class="mb-0">Damage Modifiers</h4>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <h5 class="text-danger">Immunity</h5>
+                <p class="mb-2">The creature cannot be hurt by the specified type of damage. When a creature with Immunity to a damage type is dealt that type of damage, the damage is reduced to 0.</p>
+                <p class="text-muted mb-0"><strong>Example:</strong> A creature with Fire Immunity takes 0 damage from fire-based attacks, regardless of the original damage amount.</p>
+            </div>
+            
+            <hr>
+            
+            <div class="mb-3">
+                <h5 class="text-warning">Resistance</h5>
+                <p class="mb-2">Subtract the resistance value from the total damage dealt. Resistance reduces damage by a specific amount, making the creature more durable against that damage type.</p>
+                <p class="text-muted mb-0"><strong>Example:</strong> A creature with Fire Resistance 5 takes 10 fire damage. The resistance reduces it by 5, so the creature takes only 5 damage.</p>
+            </div>
+            
+            <hr>
+            
+            <div>
+                <h5 class="text-success">Weakness</h5>
+                <p class="mb-2">Increase the damage dealt by the weakness value. Weakness makes a creature more vulnerable to a specific type of damage, increasing the harm they receive.</p>
+                <p class="text-muted mb-0"><strong>Example:</strong> A creature with Cold Weakness 3 takes 8 cold damage. The weakness increases it by 3, so the creature takes 11 damage.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-info">
+        <p class="mb-0">
+            <strong>Important:</strong> All damage modifiers (Immunity, Resistance, and Weakness) are applied <strong>after</strong> the final damage is calculated, including any doublings or bonuses from critical hits.
+        </p>
+    </div>
+
+    <h3 class="mt-4">Application Order</h3>
+    <p>When calculating damage with modifiers:</p>
+    <ol>
+        <li>Calculate the base damage from the attack</li>
+        <li>Apply any multipliers (such as critical hits that double damage)</li>
+        <li>Apply Resistance (subtract the resistance value)</li>
+        <li>Apply Weakness (add the weakness value)</li>
+        <li>If Immunity applies, damage becomes 0</li>
+    </ol>
+
+    <h3 class="mt-4">Multiple Modifiers</h3>
+    <p>If a creature has multiple modifiers for the same damage type:</p>
+    <ul>
+        <li><strong>Immunity always takes precedence:</strong> If a creature has Immunity to a damage type, Resistance and Weakness to that same type do not apply.</li>
+        <li><strong>Resistance and Weakness stack:</strong> Both can apply to the same damage instance. First subtract Resistance, then add Weakness.</li>
+        <li><strong>Multiple Resistances:</strong> If a creature has multiple sources of Resistance to the same damage type, only the highest value applies.</li>
+    </ul>
+
+    <div class="card mt-4 mb-4">
+        <div class="card-body">
+            <h5>Example: Complex Damage Calculation</h5>
+            <p>A creature has <strong>Fire Resistance 5</strong> and <strong>Fire Weakness 3</strong>. It is hit by a critical fire attack that deals 15 fire damage.</p>
+            <ol>
+                <li>Base damage: 15 (already includes critical hit doubling)</li>
+                <li>Apply Resistance 5: 15 - 5 = 10</li>
+                <li>Apply Weakness 3: 10 + 3 = 13</li>
+                <li>Final damage: 13 fire damage</li>
+            </ol>
+        </div>
+    </div>
+
+    <p class="mt-4">
+        <a href="../battle_encounters.html">&larr; Back to Battle Encounters & Rules</a>
+    </p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<!-- Search Scripts -->
+<script src="../../search/search_data.js"></script>
+<script src="../../search/search_logic.js"></script>
+</body>
+</html>
