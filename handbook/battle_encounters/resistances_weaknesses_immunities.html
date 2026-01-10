@@ -22,14 +22,6 @@
         </div>
         <div class="card-body">
             <div class="mb-3">
-                <h5 class="text-danger">Immunity</h5>
-                <p class="mb-2">The creature cannot be hurt by the specified type of damage. When a creature with Immunity to a damage type is dealt that type of damage, the damage is reduced to 0.</p>
-                <p class="text-muted mb-0"><strong>Example:</strong> A creature with Fire Immunity takes 0 damage from fire-based attacks, regardless of the original damage amount.</p>
-            </div>
-            
-            <hr>
-            
-            <div class="mb-3">
                 <h5 class="text-warning">Resistance</h5>
                 <p class="mb-2">Subtract the resistance value from the total damage dealt. Resistance reduces damage by a specific amount, making the creature more durable against that damage type.</p>
                 <p class="text-muted mb-0"><strong>Example:</strong> A creature with Fire Resistance 5 takes 10 fire damage. The resistance reduces it by 5, so the creature takes only 5 damage.</p>
@@ -37,10 +29,18 @@
             
             <hr>
             
-            <div>
+            <div class="mb-3">
                 <h5 class="text-success">Weakness</h5>
                 <p class="mb-2">Increase the damage dealt by the weakness value. Weakness makes a creature more vulnerable to a specific type of damage, increasing the harm they receive.</p>
                 <p class="text-muted mb-0"><strong>Example:</strong> A creature with Cold Weakness 3 takes 8 cold damage. The weakness increases it by 3, so the creature takes 11 damage.</p>
+            </div>
+            
+            <hr>
+            
+            <div>
+                <h5 class="text-danger">Immunity</h5>
+                <p class="mb-2">The creature cannot be hurt by the specified type of damage. When a creature with Immunity to a damage type is dealt that type of damage, the damage is reduced to 0.</p>
+                <p class="text-muted mb-0"><strong>Example:</strong> A creature with Fire Immunity takes 0 damage from fire-based attacks, regardless of the original damage amount.</p>
             </div>
         </div>
     </div>
