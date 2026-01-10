@@ -86,6 +86,48 @@ document.addEventListener('DOMContentLoaded', () => {
     // Insert at the very top of the body
     document.body.insertBefore(navbar, document.body.firstChild);
 
+    // 2. Load Font Awesome for icons (if not already loaded)
+    if (!document.querySelector('link[href*="font-awesome"]')) {
+        const fontAwesome = document.createElement('link');
+        fontAwesome.rel = 'stylesheet';
+        fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+        fontAwesome.integrity = 'sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==';
+        fontAwesome.crossOrigin = 'anonymous';
+        fontAwesome.referrerPolicy = 'no-referrer';
+        document.head.appendChild(fontAwesome);
+    }
+
+    // 3. Inject Footer with Social Media Links
+    const footer = document.createElement('footer');
+    footer.className = 'social-footer pt-4 border-top';
+    footer.style.cssText = 'border-color: rgba(189, 95, 255, 0.3) !important;';
+    
+    footer.innerHTML = `
+        <div class="container-fluid px-4">
+            <div class="row align-items-center">
+                <div class="col-12 text-center">
+                    <p class="mb-3 text-muted" style="color: #a0aec0 !important; font-size: 0.9rem;">Join our community</p>
+                    <div class="social-links d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="https://discord.gg/AbBtu3XG" target="_blank" rel="noopener noreferrer" class="social-link" title="Discord" aria-label="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="https://www.facebook.com/SingularityTTRPG/" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.reddit.com/r/SingularityTTRPG/" target="_blank" rel="noopener noreferrer" class="social-link" title="Reddit" aria-label="Reddit">
+                            <i class="fab fa-reddit"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@SingularityTTRPG" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(footer);
+
     const searchInput = document.getElementById('searchInput');
     const resultsContainer = document.getElementById('searchResults');
 

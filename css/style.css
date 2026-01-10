@@ -8,6 +8,19 @@ body {
     text-align: justify;
     margin: 0;
     padding-top: 80px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make main content area grow to push footer down */
+body > .container {
+    flex: 1 0 auto;
+}
+
+/* Special handling for index.html which has min-vh-100 container */
+body > .container.min-vh-100 {
+    min-height: auto !important; /* Override min-vh-100 when using flexbox */
 }
 
 /* Add this to style.css */
@@ -519,4 +532,66 @@ hr {
 
 #searchResults {
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Social Media Footer Styling */
+.social-footer {
+    margin-top: auto;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    border-top: 1px solid rgba(189, 95, 255, 0.3) !important;
+    flex-shrink: 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(189, 95, 255, 0.3);
+    color: #a0aec0;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.social-link:hover {
+    background-color: rgba(189, 95, 255, 0.15);
+    border-color: #BD5FFF;
+    color: #BD5FFF;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(189, 95, 255, 0.4);
+}
+
+.social-link:active {
+    transform: translateY(-1px);
+}
+
+.social-link i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover i {
+    transform: scale(1.1);
+}
+
+/* Ensure footer is visible on all pages */
+.social-footer {
+    color: #a0aec0;
+}
+
+.social-footer p {
+    margin-bottom: 1rem;
 }
