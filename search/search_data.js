@@ -26,15 +26,30 @@ const searchIndex = [
     { title: "Human", url: "character_creation/phenotypes/human.html", tags: "race, species, versatile" },
     { title: "Terran", url: "character_creation/phenotypes/subtypes/terran.html", tags: "human subtype, earth" },
 
-    // Talents (Examples)
-    { title: "Bastion's Resistance", url: "character_creation/powersets/bastion/bastion_talents/bastions_resistance.html", tags: "bastion talent, damage reduction" },
+    // Bastion Talents
+    { title: "Bastion Talents", url: "character_creation/powersets/bastion/bastion_talents.html", tags: "bastion, talents, list, defense, tank" },
+    { title: "Bastion's Resistance", url: "character_creation/powersets/bastion/bastion_talents/bastions_resistance.html", tags: "bastion talent, damage reduction, resistance" },
+    { title: "Ironbound", url: "character_creation/powersets/bastion/bastion_talents/ironbound.html", tags: "bastion talent, hp, health, endurance" },
+    { title: "Enlarged Presence", url: "character_creation/powersets/bastion/bastion_talents/enlarged_presence.html", tags: "bastion talent, size, large" },
+    { title: "Protect the Weak", url: "character_creation/powersets/bastion/bastion_talents/protect_the_weak.html", tags: "bastion talent, defense, protection, penalty" },
+    { title: "Defensive Stance", url: "character_creation/powersets/bastion/bastion_talents/defensive_stance.html", tags: "bastion talent, ac, defense, stance" },
+    { title: "Increased Resistance", url: "character_creation/powersets/bastion/bastion_talents/increased_resistance.html", tags: "bastion talent, defense, resistance" },
+    { title: "Intercept Attack", url: "character_creation/powersets/bastion/bastion_talents/intercept_attack.html", tags: "bastion talent, protection, ally, reaction" },
+    { title: "Regenerative Fortitude", url: "character_creation/powersets/bastion/bastion_talents/regenerative_fortitude.html", tags: "bastion talent, healing, hp, regeneration" },
+    { title: "Protective Barrier", url: "character_creation/powersets/bastion/bastion_talents/protective_barrier.html", tags: "bastion talent, ally, ac, aura" },
+    { title: "Total Immunity", url: "character_creation/powersets/bastion/bastion_talents/total_immunity.html", tags: "bastion talent, immunity, defense" },
+    { title: "Indomitable Will", url: "character_creation/powersets/bastion/bastion_talents/indomitable_will.html", tags: "bastion talent, saving throw, paralyzed, staggered, dazed" },
+    { title: "Rapid Intercept", url: "character_creation/powersets/bastion/bastion_talents/rapid_intercept.html", tags: "bastion talent, protection, movement, intercept" },
+    { title: "Adaptive Defense", url: "character_creation/powersets/bastion/bastion_talents/adaptive_defense.html", tags: "bastion talent, resistance, adaptive" },
+    { title: "Legendary Resilience", url: "character_creation/powersets/bastion/bastion_talents/legendary_resilience.html", tags: "bastion talent, resistance, all damage" },
+    { title: "Guardian Aura", url: "character_creation/powersets/bastion/bastion_talents/guardian_aura.html", tags: "bastion talent, ally, aura, resistance" },
+    { title: "Immovable Object", url: "character_creation/powersets/bastion/bastion_talents/immovable_object.html", tags: "bastion talent, movement, prone, anchor" },
+    { title: "Unbreakable", url: "character_creation/powersets/bastion/bastion_talents/unbreakable.html", tags: "bastion talent, unconscious, wound, survival" },
+    
+    // Marksman Talents
     { title: "Surgical Precision", url: "character_creation/powersets/marksman/marksman_talents/surgical_precision.html", tags: "marksman talent, wound" },
     { title: "Deadeye", url: "character_creation/powersets/marksman/marksman_talents/deadeye.html", tags: "marksman talent, aim" },
-    { title: "Ironbound", url: "character_creation/powersets/bastion/bastion_talents/ironbound.html", tags: "bastion talent, hp, health" },
     { title: "Tripoint Trauma", url: "character_creation/powersets/marksman/marksman_talents/tripoint_trauma.html", tags: "marksman talent, critical, wound" },
-    { title: "Increased Resistance", url: "character_creation/powersets/bastion/bastion_talents/increased_resistance.html", tags: "bastion talent, defense, resistance" },
-    { title: "Total Immunity", url: "character_creation/powersets/bastion/bastion_talents/total_immunity.html", tags: "bastion talent, immunity, defense" },
-    { title: "Protect the Weak", url: "character_creation/powersets/bastion/bastion_talents/protect_the_weak.html", tags: "bastion talent, defense, protection, penalty" },
     { title: "Blast", url: "character_creation/talents/blast.html", tags: "generic talent, attack, damage, energy" },
     { title: "Generic Talent", url: "character_creation/talents.html", tags: "talents, list, feats, progression" },
 
