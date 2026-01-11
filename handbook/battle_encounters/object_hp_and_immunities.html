@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Object HP & Immunities | Singularity Player's Handbook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../../img/infinitylogo.png">
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="singularityttrpg" data-description="Support me on Buy me a coffee!" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+</head>
+
+<body>
+<div class="container mt-5">
+    <h1>Object HP & Immunities</h1>
+    
+    <p class="mt-3">
+        Many abilities and gadgets create objects or barriers that can be damaged or destroyed in combat. These objects have <strong>Hit Points (HP)</strong> and follow special rules regarding damage and conditions.
+    </p>
+
+    <h3 class="mt-4">Object Hit Points</h3>
+    <p>
+        Objects have HP just like creatures do. When an object takes damage equal to or exceeding its HP, it is destroyed. Some abilities explicitly state an object's HP (such as the <strong>Shield Projector</strong> gadget, which creates a barrier with <strong>15 + Gadget Tuning rank</strong> HP). For objects not created by abilities, the Architect determines their HP based primarily on the object's <strong>material durability</strong>, with size and construction quality as additional factors.
+    </p>
+
+    <div class="card mb-4 mt-4">
+        <div class="card-header bg-dark text-white">
+            <h4 class="mb-0">Object HP Calculation</h4>
+        </div>
+        <div class="card-body">
+            <p class="mb-3">Object HP is calculated by multiplying a <strong>base HP</strong> (determined by size) by a <strong>material multiplier</strong>:</p>
+            <p class="mb-3"><strong>Object HP = Base HP (by size) × Material Multiplier</strong></p>
+            
+            <h5 class="mt-4">Base HP by Size</h5>
+            <ul class="mb-4">
+                <li><strong>Tiny objects</strong> (jewelry, small tools): 1 HP</li>
+                <li><strong>Small objects</strong> (weapons, handheld items): 3 HP</li>
+                <li><strong>Medium objects</strong> (furniture, doors): 6 HP</li>
+                <li><strong>Large objects</strong> (vehicles, large walls): 12 HP</li>
+                <li><strong>Huge objects</strong> (buildings, massive structures): 24 HP</li>
+            </ul>
+
+            <h5 class="mt-4">Material Multipliers</h5>
+            <ul class="mb-0">
+                <li><strong>Fragile materials</strong> (glass, paper, straw, thin plastic): ×1</li>
+                <li><strong>Soft materials</strong> (cloth, leather, wood, plaster): ×2</li>
+                <li><strong>Average materials</strong> (stone, brick, thick wood, concrete): ×4</li>
+                <li><strong>Hard materials</strong> (iron, steel, reinforced concrete): ×6</li>
+                <li><strong>Very hard materials</strong> (titanium, diamond, advanced alloys): ×10</li>
+            </ul>
+            <p class="mt-3 mb-0 text-muted"><em>Note: The Architect may adjust multipliers based on construction quality, thickness, and special reinforcement. A well-constructed object might gain +1 to the multiplier, while a poorly made one might lose -1.</em></p>
+        </div>
+    </div>
+
+    <div class="card mb-4 mt-4">
+        <div class="card-header bg-dark text-white">
+            <h4 class="mb-0">Examples</h4>
+        </div>
+        <div class="card-body">
+            <ul class="mb-0">
+                <li><strong>Small diamond</strong>: Tiny (1 HP) × Very hard (×10) = <strong>10 HP</strong></li>
+                <li><strong>Dumbbell (iron)</strong>: Small (3 HP) × Hard (×6) = <strong>18 HP</strong></li>
+                <li><strong>Wooden door</strong>: Medium (6 HP) × Soft (×2) = <strong>12 HP</strong></li>
+                <li><strong>Straw house wall</strong>: Large (12 HP) × Fragile (×1) = <strong>12 HP</strong></li>
+                <li><strong>Steel-reinforced concrete wall</strong>: Large (12 HP) × Hard (×6) = <strong>72 HP</strong></li>
+                <li><strong>Glass window</strong>: Medium (6 HP) × Fragile (×1) = <strong>6 HP</strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="mt-4">Object Immunities</h3>
+    <p>
+        Inanimate objects and hazards are immune to certain types of damage and conditions that only affect living creatures. This reflects the fundamental difference between objects and creatures.
+    </p>
+
+    <div class="card mb-4 mt-4">
+        <div class="card-header bg-dark text-white">
+            <h4 class="mb-0">Damage Type Immunities</h4>
+        </div>
+        <div class="card-body">
+            <p class="mb-2">Objects are immune to the following damage types:</p>
+            <ul class="mb-0">
+                <li><strong>Bleed</strong> - Objects don't have circulatory systems</li>
+                <li><strong>Death effects</strong> - Objects cannot be "killed"</li>
+                <li><strong>Disease</strong> - Objects cannot become diseased</li>
+                <li><strong>Healing</strong> - Objects cannot be healed (though they can be repaired)</li>
+                <li><strong>Mental effects</strong> - Objects cannot be affected by mental damage (see exception below)</li>
+                <li><strong>Nonlethal attacks</strong> - Objects don't have consciousness to stun</li>
+                <li><strong>Poison</strong> - Objects cannot be poisoned</li>
+                <li><strong>Spirit, Vitality, Void</strong> - Damage types that specifically affect living beings</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card mb-4 mt-4">
+        <div class="card-header bg-dark text-white">
+            <h4 class="mb-0">Condition Immunities</h4>
+        </div>
+        <div class="card-body">
+            <p class="mb-2">Objects are immune to the following conditions:</p>
+            <ul class="mb-0">
+                <li><strong><a href="statuses/blinded.html">Blinded</a></strong> - Objects don't have senses</li>
+                <li><strong><a href="statuses/dazed.html">Dazed</a></strong> - Objects cannot be disoriented</li>
+                <li><strong><a href="statuses/deafened.html">Deafened</a></strong> - Objects don't have hearing</li>
+                <li><strong><a href="statuses/fatigued.html">Fatigued</a></strong> - Objects don't tire</li>
+                <li><strong><a href="statuses/immobilized.html">Immobilized</a></strong> - Objects are already stationary</li>
+                <li><strong><a href="statuses/offbalance.html">Off-balance</a></strong> - Objects don't have balance</li>
+                <li><strong><a href="statuses/paralyzed.html">Paralyzed</a></strong> - Objects are already inanimate</li>
+                <li><strong><a href="statuses/prone.html">Prone</a></strong> - Objects don't have a standing position</li>
+                <li><strong><a href="statuses/staggered.html">Staggered</a></strong> - Objects don't use energy</li>
+                <li><strong><a href="wounds.html">Unconscious</a></strong> - Objects are not conscious</li>
+            </ul>
+            <p class="mt-3 mb-0 text-muted"><em>Note: Objects may also be immune to other conditions at the Architect's discretion. For instance, a stationary object cannot be affected by movement-based conditions.</em></p>
+        </div>
+    </div>
+
+    <h3 class="mt-4">Special Cases</h3>
+    
+    <div class="card mb-3 mt-3">
+        <div class="card-body">
+            <h5>Conscious Objects</h5>
+            <p class="mb-0">
+                <strong>Conscious, thinking items</strong> (such as sentient weapons or AI systems) are <strong>not immune</strong> to mental effects, as they possess consciousness and can be affected by mental attacks.
+            </p>
+        </div>
+    </div>
+
+    <div class="card mb-3 mt-3">
+        <div class="card-body">
+            <h5>Conditional Immunities</h5>
+            <p class="mb-0">
+                Many objects are immune to additional conditions at the Architect's discretion, based on their nature. For instance, a sword can't move, so it can't take a penalty to its Speed. However, a spinning blade trap might be affected by conditions that would slow or stop its movement.
+            </p>
+        </div>
+    </div>
+
+    <h3 class="mt-4">Attacking Objects</h3>
+    <p>
+        When attacking an object, use the normal attack rules. Objects typically have an AC based on their size and material:
+    </p>
+    <ul>
+        <li><strong>Stationary objects</strong> (walls, doors): AC 10-15 (based on material)</li>
+        <li><strong>Moving objects</strong> (vehicles, constructs): AC based on their Dexterity or movement capabilities</li>
+        <li><strong>Gadget-created objects</strong>: AC as specified by the ability, or use the creator's relevant defense value</li>
+    </ul>
+
+    <h3 class="mt-4">Destroying Objects</h3>
+    <p>
+        When an object is reduced to 0 HP, it is destroyed. Destroyed objects:
+    </p>
+    <ul>
+        <li>Cannot provide cover or block line of effect</li>
+        <li>Cannot be used for their intended purpose</li>
+        <li>May leave behind debris or hazardous materials</li>
+        <li>For gadget-created objects, any ongoing effects or abilities associated with that object end immediately</li>
+    </ul>
+
+    <h5 class="mt-4">Example</h5>
+    <div class="card mt-3 mb-4">
+        <div class="card-body">
+            <p>
+                A character uses the <strong>Shield Projector</strong> gadget to create a barrier with 18 HP. An enemy attacks the barrier with a weapon, dealing 12 damage. The barrier now has 6 HP remaining. If the barrier takes 6 or more damage before it expires naturally, it is destroyed and no longer provides cover.
+            </p>
+        </div>
+    </div>
+
+    <p class="mt-4">
+        <a href="../battle_encounters.html">&larr; Back to Battle Encounters & Rules</a>
+    </p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<!-- Search Scripts -->
+<script src="../../search/search_data.js"></script>
+<script src="../../search/search_logic.js"></script>
+</body>
+</html>
