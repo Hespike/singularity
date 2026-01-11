@@ -89,6 +89,10 @@ const searchIndex = [
     { title: "Enough Prep Time", url: "character_creation/powersets/gadgeteer/gadgeteer_talents/enough_prep_time.html", tags: "gadgeteer talent, planning, bonus" },
     { title: "Expanded Loadout", url: "character_creation/powersets/gadgeteer/gadgeteer_talents/expanded_loadout.html", tags: "gadgeteer talent, slots, preparation" },
     { title: "Improvised Gadget", url: "character_creation/powersets/gadgeteer/gadgeteer_talents/improvised_gadget.html", tags: "gadgeteer talent, create, random" },
+    { title: "Multiple Preparations", url: "character_creation/powersets/gadgeteer/gadgeteer_talents/multiple_preparations.html", tags: "gadgeteer talent, preparation, multiple enemies" },
+    { title: "Rapid Preparation", url: "character_creation/powersets/gadgeteer/gadgeteer_talents/rapid_preparation.html", tags: "gadgeteer talent, preparation, time reduction" },
+    { title: "Superior Engineering", url: "character_creation/powersets/gadgeteer/gadgeteer_talents/superior_engineering.html", tags: "gadgeteer talent, gadget mastery, engineering" },
+    { title: "Sustained Tuning", url: "character_creation/powersets/gadgeteer/gadgeteer_talents/sustained_tuning.html", tags: "gadgeteer talent, gadget tuning, maintain, dc" },
 
     // Paragon Talents
     { title: "Dominating Presence", url: "character_creation/powersets/paragon/paragon_talents/dominating_presence.html", tags: "paragon talent, intimidation, flight" },
