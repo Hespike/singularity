@@ -72,7 +72,7 @@ const searchIndex = [
     { title: "Impossible Shot", url: "character_creation/powersets/marksman/marksman_talents/impossible_shot.html", tags: "marksman talent, utility, range, cover" },
     { title: "Unerring Aim", url: "character_creation/powersets/marksman/marksman_talents/unerring_aim.html", tags: "marksman talent, aim, accuracy, perfect aim" },
     { title: "Perfect Shot", url: "character_creation/powersets/marksman/marksman_talents/perfect_shot.html", tags: "marksman talent, ultimate, auto hit, critical" },
-    { title: "Blast", url: "character_creation/talents/blast.html", tags: "generic talent, attack, damage, energy" },
+    { title: "Blast", url: "character_creation/talents/blast_apprentice.html", tags: "generic talent, attack, damage, energy" },
     { title: "Generic Talent", url: "character_creation/talents.html", tags: "talents, list, feats, progression" },
 
     // History & Lore
