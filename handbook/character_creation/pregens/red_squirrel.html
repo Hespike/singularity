@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Red Squirrel - Singularity Interactive Sheet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        body { transition: background-color 0.3s, color 0.3s; }
+        input[type="text"], textarea {
+            width: 100%; border: none; background: transparent; color: inherit;
+            outline: none; font-family: inherit; padding: 2px 5px;
+        }
+        textarea { resize: none; width: 100%; display: block; }
+        input[type="text"]:focus, textarea:focus { background: rgba(0, 123, 255, 0.1); }
+
+        .hero-header { display: flex; align-items: center; gap: 15px; border-bottom: 3px solid #000; padding-bottom: 5px; }
+        .hero-header h1 { margin: 0; font-size: 2rem; font-weight: 800; text-transform: uppercase; }
+        .hero-header input { font-size: 2rem; font-weight: bold; }
+
+        .stat-box { text-align: center; padding: 10px; border: 1px solid #dee2e6; background: #fff; min-height: 90px; }
+        .stat-value input { font-size: 1.8rem; font-weight: bold; text-align: center; height: 45px; }
+        .hp-box { border: 2px solid #000; padding: 5px; min-height: 80px; display: flex; align-items: center; }
+        .hp-box input { font-size: 1.5rem; text-align: center; }
+        
+        .wound-location { border: 1px solid #ced4da; height: 35px; background: #f8f9fa; }
+        .wound-penalty { border: 1px solid #ced4da; height: 35px; background: #fff; }
+        .note-box { border: 1px solid #ced4da; min-height: 120px; background: #fff; padding: 5px; }
+        
+        .info-row { display: flex; align-items: baseline; margin-bottom: 0.5rem; border-bottom: 1px solid #dee2e6; padding-bottom: 2px; }
+        .info-label { white-space: nowrap; margin-right: 8px; font-weight: bold; }
+
+        body.dark-mode { background-color: #121212 !important; color: #e0e0e0 !important; }
+        .dark-mode .card { background-color: #1e1e1e !important; border-color: #333 !important; color: #e0e0e0; }
+        .dark-mode .card-header { background-color: #2d2d2d !important; color: #fff !important; }
+        .dark-mode .stat-box, .dark-mode .note-box, .dark-mode .wound-penalty { background-color: #1e1e1e !important; border-color: #444 !important; }
+        .dark-mode .wound-location { background-color: #2d2d2d !important; border-color: #444 !important; }
+        .dark-mode .hp-box { border-color: #00d4ff; }
+        .dark-mode .table { color: #e0e0e0 !important; border-color: #444 !important; }
+        .dark-mode .table thead th { background-color: #343a40 !important; color: #fff !important; border-color: #444 !important; }
+        .dark-mode .table td { background-color: #1e1e1e !important; border-color: #444 !important; }
+        .dark-mode .info-row { border-color: #444 !important; }
+        .dark-mode .hero-header { border-color: #fff !important; }
+        .dark-mode .text-muted, .dark-mode small { color: #ffffff !important; opacity: 1; font-weight: 500; }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background-color: white !important; color: black !important; }
+            .hero-header { border-color: black !important; }
+        }
+    </style>
+    <link rel="icon" href="../../../img/infinitylogo.png">
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="singularityttrpg" data-description="Support me on Buy me a coffee!" data-message="" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+</head>
+
+<body>
+<div class="container mt-4 pb-5">
+    <div class="d-flex justify-content-end mb-3 no-print">
+        <div>
+            <button onclick="toggleDarkMode()" class="btn btn-sm btn-outline-primary" id="themeBtn">Dark Mode</button>
+            <button onclick="window.print()" class="btn btn-sm btn-success">Save as PDF</button>
+        </div>
+    </div>
+
+    <div class="hero-header w-100 mb-4">
+        <img src="../../../img/RedSquirrel.jpg" alt="Red Squirrel" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; border: 2px solid #000; background: #eee;" class="me-2">
+        <div class="flex-grow-1">
+            <h1>Hero:</h1>
+            <input type="text" id="hero_name" value="Red Squirrel">
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-6 border-end">
+            <div class="info-row"><span class="info-label">Real Name:</span> <input type="text" id="real_name" value="Marcus Trent"></div>
+            <div class="info-row"><span class="info-label">Phenotype / Subtype:</span> <input type="text" id="phenotype" value="Human / Terran"></div>
+            <div class="info-row"><span class="info-label">Powerset:</span> <input type="text" id="powerset" value="Gadgeteer"></div>
+        </div>
+        <div class="col-md-6">
+            <div class="info-row"><span class="info-label">Background:</span> <input type="text" id="background" value="Criminal"></div>
+            <div class="row g-2">
+                <div class="col-4"><div class="info-row"><span class="info-label">Level:</span> <input type="text" id="level" value="1"></div></div>
+                <div class="col-4"><div class="info-row"><span class="info-label">Size:</span> <input type="text" id="size" value="Medium"></div></div>
+                <div class="col-4"><div class="info-row"><span class="info-label">Speed:</span> <input type="text" id="speed" value="25ft"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4 text-center">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-header bg-dark text-white fw-bold">Vitality & Defense</div>
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-4"><small class="text-muted d-block">MAX HP</small><input type="text" id="max_hp" class="h3 text-center w-100" value="9"></div>
+                        <div class="col-4"><small class="text-muted d-block">CURRENT</small><div class="hp-box"><input type="text" id="curr_hp" class="w-100" value="9"></div></div>
+                        <div class="col-4"><small class="text-muted d-block">AC</small><input type="text" id="ac_val" class="h3 text-center w-100" value="13"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card h-100">
+                <div class="card-header bg-dark text-white text-center fw-bold">Wounds Tracking</div>
+                <div class="card-body">
+                    <div class="row mb-2 g-1">
+                        <div class="col-6 text-center border-end">
+                            <small class="text-muted d-block">WOUND LIMIT</small>
+                            <div class="h5 mb-0">4</div>
+                            <small class="text-muted">(3 + 1 END)</small>
+                        </div>
+                        <div class="col-6 text-center">
+                            <small class="text-muted d-block">CURRENT WOUNDS</small>
+                            <div class="hp-box" style="min-height: 50px;"><input type="text" id="curr_wounds" class="w-100 h5 text-center" value="0" style="font-size: 1.5rem;"></div>
+                        </div>
+                    </div>
+                    <hr class="my-2">
+                    <div class="row mb-1 g-1"><div class="col-4 text-start"><small class="text-muted ps-2">Location</small></div><div class="col-8 text-start"><small class="text-muted">Active Penalty</small></div></div>
+                    <div class="row mb-1 g-1"><div class="col-4"><div class="wound-location"><input type="text" id="w_loc_1"></div></div><div class="col-8"><div class="wound-penalty"><input type="text" id="w_pen_1"></div></div></div>
+                    <div class="row mb-1 g-1"><div class="col-4"><div class="wound-location"><input type="text" id="w_loc_2"></div></div><div class="col-8"><div class="wound-penalty"><input type="text" id="w_pen_2"></div></div></div>
+                    <div class="row mb-1 g-1"><div class="col-4"><div class="wound-location"><input type="text" id="w_loc_3"></div></div><div class="col-8"><div class="wound-penalty"><input type="text" id="w_pen_3"></div></div></div>
+                    <div class="row mb-1 g-1"><div class="col-4"><div class="wound-location"><input type="text" id="w_loc_4"></div></div><div class="col-8"><div class="wound-penalty"><input type="text" id="w_pen_4"></div></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-0 mb-5">
+        <div class="col"><div class="stat-box"><div class="small fw-bold">MIGHT</div><div class="stat-value"><input type="text" id="stat_might" value="+0"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">AGILITY</div><div class="stat-value"><input type="text" id="stat_agility" value="+2"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">ENDURANCE</div><div class="stat-value"><input type="text" id="stat_end" value="+1"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">WITS</div><div class="stat-value"><input type="text" id="stat_wits" value="+3"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">CHARM</div><div class="stat-value"><input type="text" id="stat_charm" value="+0"></div></div></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Trainings</h3>
+            <table class="table table-bordered table-sm mb-4">
+                <thead class="table-light"><tr><th>Name</th><th>Ability</th><th>Training</th></tr></thead>
+                <tbody>
+                    <tr><td><input type="text" id="sk_n_1" value="Hacking"></td><td><input type="text" id="sk_a_1" value="Wits"></td><td><input type="text" id="sk_t_1" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_2" value="Stealth"></td><td><input type="text" id="sk_a_2" value="Agility"></td><td><input type="text" id="sk_t_2" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_3" value="Gadget Tuning"></td><td><input type="text" id="sk_a_3" value="Wits"></td><td><input type="text" id="sk_t_3" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_4" value="Technology"></td><td><input type="text" id="sk_a_4" value="Wits"></td><td><input type="text" id="sk_t_4" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_5"></td><td><input type="text" id="sk_a_5"></td><td><input type="text" id="sk_t_5"></td></tr>
+                </tbody>
+            </table>
+            <h3>Powers & Abilities</h3>
+            <table class="table table-bordered table-sm mb-4">
+                <thead class="table-light"><tr><th style="width: 30%;">Name</th><th style="width: 70%;">Effect</th></tr></thead>
+                <tbody>
+                    <tr><td><input type="text" id="p_n_1" value="Improvised Gadget"></td><td><input type="text" id="p_e_1" value="Action, 2 Energy: Create one Level 0 gadget (once per day)"></td></tr>
+                    <tr><td><input type="text" id="p_n_2"></td><td><input type="text" id="p_e_2"></td></tr>
+                    <tr><td><input type="text" id="p_n_3"></td><td><input type="text" id="p_e_3"></td></tr>
+                    <tr><td><input type="text" id="p_n_4"></td><td><input type="text" id="p_e_4"></td></tr>
+                    <tr><td><input type="text" id="p_n_5"></td><td><input type="text" id="p_e_5"></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3 border-success">
+                <div class="card-header bg-success text-white d-flex justify-content-between align-items-center py-1 fw-bold">
+                    <span class="small">Available Funds</span>
+                    <span class="d-flex align-items-center"><input type="text" id="credits" class="text-white text-end me-1" style="width: 80px;" value="8"> Credits</span>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header bg-secondary text-white fw-bold">Inventory</div>
+                <div class="card-body p-0"><textarea id="inv_box" rows="6" placeholder="List items...">Jacket (2 credits), Tech Screen Gloves (custom gadget interface)</textarea></div>
+            </div>
+            <h3>Progression</h3>
+            <table class="table table-sm table-bordered">
+                <thead class="table-light"><tr><th style="width: 30%;">Source</th><th style="width: 70%;">Effect</th></tr></thead>
+                <tbody>
+                    <tr><td><input type="text" id="pr_s_1" value="Phenotype"></td><td><input type="text" id="pr_e_1" value="+1 Wits, Skill Training (Apprentice) - Technology (Wits)"></td></tr>
+                    <tr><td><input type="text" id="pr_s_2" value="Subtype"></td><td><input type="text" id="pr_e_2" value="+1 Wits, Initiative Training (Apprentice)"></td></tr>
+                    <tr><td><input type="text" id="pr_s_3" value="Powerset"></td><td><input type="text" id="pr_e_3" value="+1 Wits (inherent), +2 Ability Boost (+1 AGI, +1 END), Hacking Apprentice, Gadget Tuning Apprentice, Improvised Gadget Talent"></td></tr>
+                    <tr><td><input type="text" id="pr_s_4" value="Background"></td><td><input type="text" id="pr_e_4" value="+1 Agility, Stealth (Agility) Apprentice"></td></tr>
+                    <tr><td><input type="text" id="pr_s_5"></td><td><input type="text" id="pr_e_5"></td></tr>
+                    <tr><td><input type="text" id="pr_s_6"></td><td><input type="text" id="pr_e_6"></td></tr>
+                    <tr><td><input type="text" id="pr_s_7"></td><td><input type="text" id="pr_e_7"></td></tr>
+                    <tr><td><input type="text" id="pr_s_8"></td><td><input type="text" id="pr_e_8"></td></tr>
+                    <tr><td><input type="text" id="pr_s_9"></td><td><input type="text" id="pr_e_9"></td></tr>
+                    <tr><td><input type="text" id="pr_s_10"></td><td><input type="text" id="pr_e_10"></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row mt-2"><div class="col-12"><h3>Notes</h3><div class="note-box"><textarea id="notes_main" rows="4"></textarea></div></div></div>
+    <div class="row mt-2"><div class="col-12"><h3>Backstory</h3><div class="note-box"><textarea id="notes_back" rows="4">Marcus Trent was always the kid who took things apart to see how they worked and sometimes put them back together better. Growing up in the tech districts, he learned that the best way to understand a system was to break into it. What started as curiosity became a skill, and that skill became a reputation.
+
+When corporate security started hunting him for "unauthorized system access," Marcus went underground. He adopted the alias "Red Squirrel" after a particularly memorable escape through ventilation shafts, and the name stuck. Now he uses his hacking skills and custom-built gadgets to help those who can't help themselves, always staying one step ahead of the law and the corporations that think they own the future.
+
+His signature tech screen gloves allow him to interface directly with his gadgets, controlling them with gestures and taps. Combined with his jacket's concealment properties, Red Squirrel can disappear into a crowd or slip through the tightest security as long as he has enough prep time.</textarea></div></div></div>
+    <div class="row mt-2"><div class="col-12"><h3>Appearance</h3><div class="note-box"><textarea id="notes_app" rows="4">Marcus is lean and wiry, with quick, nervous movements that match his alias. He wears a dark jacket that helps him blend into crowds, and his most distinctive feature is the pair of tech screen gloves: sleek, fingerless gloves with integrated holographic displays on the palms that glow softly when active. His eyes are always scanning, always calculating, looking for the next angle or escape route.</textarea></div></div></div>
+
+    <p class="mt-5 no-print text-center">
+        <a href="../pregens.html" class="text-info text-decoration-none">&larr; Back to Pregens</a>
+    </p>
+</div>
+
+<script>
+    // UNIQUE PREFIX FOR RED SQUIRREL
+    const sheetPrefix = 'redsquirrel_';
+
+    function toggleDarkMode() {
+        const body = document.body;
+        const btn = document.getElementById('themeBtn');
+        body.classList.toggle('dark-mode');
+        if(btn) btn.innerText = body.classList.contains('dark-mode') ? "Light Mode" : "Dark Mode";
+        localStorage.setItem('singularity_darkMode', body.classList.contains('dark-mode'));
+    }
+
+    const allInputs = document.querySelectorAll('input, textarea');
+    allInputs.forEach(el => {
+        el.addEventListener('input', () => { 
+            if (el.id) localStorage.setItem(sheetPrefix + el.id, el.value); 
+        });
+    });
+
+    window.onload = () => {
+        allInputs.forEach(el => {
+            if (el.id) {
+                const val = localStorage.getItem(sheetPrefix + el.id);
+                // Handle default for Red Squirrel if no save exists
+                if (el.id === 'hero_name' && (val === null || val === '')) {
+                    el.value = "Red Squirrel";
+                } else if (val !== null) {
+                    el.value = val;
+                }
+            }
+        });
+        if (localStorage.getItem('singularity_darkMode') === 'true') toggleDarkMode();
+    };
+</script>
+</body>
+</html>
