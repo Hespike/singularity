@@ -92,35 +92,26 @@
         </div>
     </div>
 
-    <div class="row mb-4 text-center">
-        <div class="col-md-4">
-            <div class="card h-100">
-                <div class="card-header bg-dark text-white fw-bold">Vitality & Defense</div>
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header bg-dark text-white fw-bold text-center">Vitality, Defense & Wounds</div>
                 <div class="card-body">
-                    <div class="row align-items-center">
-                        <div class="col-4"><small class="text-muted d-block">MAX HP</small><input type="text" id="max_hp" class="h3 text-center w-100" placeholder="0"></div>
-                        <div class="col-4"><small class="text-muted d-block">CURRENT</small><div class="hp-box"><input type="text" id="curr_hp" class="w-100" placeholder="0"></div></div>
-                        <div class="col-4"><small class="text-muted d-block">AC</small><input type="text" id="ac_val" class="h3 text-center w-100" placeholder="10"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div class="card h-100">
-                <div class="card-header bg-dark text-white text-center fw-bold">Wounds Tracking</div>
-                <div class="card-body">
-                    <div class="row mb-2 g-1">
-                        <div class="col-6 text-center border-end">
+                    <div class="row mb-3 text-center">
+                        <div class="col-md-2"><small class="text-muted d-block">MAX HP</small><input type="text" id="max_hp" class="h3 text-center w-100" placeholder="0"></div>
+                        <div class="col-md-2"><small class="text-muted d-block">CURRENT</small><div class="hp-box"><input type="text" id="curr_hp" class="w-100" placeholder="0"></div></div>
+                        <div class="col-md-2"><small class="text-muted d-block">AC</small><input type="text" id="ac_val" class="h3 text-center w-100" placeholder="10"></div>
+                        <div class="col-md-3 text-center border-start">
                             <small class="text-muted d-block">WOUND LIMIT</small>
                             <div class="h5 mb-0"><input type="text" id="wound_limit" class="text-center w-100" placeholder="0" style="font-size: 1.5rem; border: none; background: transparent;"></div>
                             <small class="text-muted">(3 + END)</small>
                         </div>
-                        <div class="col-6 text-center">
+                        <div class="col-md-3 text-center border-start">
                             <small class="text-muted d-block">CURRENT WOUNDS</small>
                             <div class="hp-box" style="min-height: 50px;"><input type="text" id="curr_wounds" class="w-100 h5 text-center" value="0" style="font-size: 1.5rem;"></div>
                         </div>
                     </div>
-                    <hr class="my-2">
+                    <hr class="my-3">
                     <div class="row mb-1 g-1"><div class="col-4 text-start"><small class="text-muted ps-2">Location</small></div><div class="col-8 text-start"><small class="text-muted">Active Penalty</small></div></div>
                     <div class="row mb-1 g-1"><div class="col-4"><div class="wound-location"><input type="text" id="w_loc_1"></div></div><div class="col-8"><div class="wound-penalty"><input type="text" id="w_pen_1"></div></div></div>
                     <div class="row mb-1 g-1"><div class="col-4"><div class="wound-location"><input type="text" id="w_loc_2"></div></div><div class="col-8"><div class="wound-penalty"><input type="text" id="w_pen_2"></div></div></div>

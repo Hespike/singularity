@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vanguard - Singularity Interactive Sheet</title>
+    <title>Grim Reaper - Singularity Interactive Sheet</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <style>
         body { transition: background-color 0.3s, color 0.3s; }
@@ -63,18 +63,18 @@
     </div>
 
     <div class="hero-header w-100 mb-4">
-        <img src="../../../img/Vanguard.jpg" alt="Vanguard" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; border: 2px solid #000; background: #eee;" class="me-2">
+        <img src="../../../img/GrimReaper.jpg" alt="Grim Reaper" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; border: 2px solid #000; background: #eee;" class="me-2">
         <div class="flex-grow-1">
             <h1>Hero:</h1>
-            <input type="text" id="hero_name" value="Vanguard">
+            <input type="text" id="hero_name" value="Grim Reaper">
         </div>
     </div>
 
     <div class="row mb-4">
         <div class="col-md-6 border-end">
-            <div class="info-row"><span class="info-label">Real Name:</span> <input type="text" id="real_name" value="Cassidy Miller"></div>
+            <div class="info-row"><span class="info-label">Real Name:</span> <input type="text" id="real_name" value="James Cross"></div>
             <div class="info-row"><span class="info-label">Phenotype / Subtype:</span> <input type="text" id="phenotype" value="Human / Terran"></div>
-            <div class="info-row"><span class="info-label">Powerset:</span> <input type="text" id="powerset" value="Bastion"></div>
+            <div class="info-row"><span class="info-label">Powerset:</span> <input type="text" id="powerset" value="Marksman"></div>
         </div>
         <div class="col-md-6">
             <div class="info-row"><span class="info-label">Background:</span> <input type="text" id="background" value="Military"></div>
@@ -92,13 +92,13 @@
                 <div class="card-header bg-dark text-white fw-bold text-center">Vitality, Defense & Wounds</div>
                 <div class="card-body">
                     <div class="row mb-3 text-center">
-                        <div class="col-md-2"><small class="text-muted d-block">MAX HP</small><input type="text" id="max_hp" class="h3 text-center w-100" value="18"></div>
-                        <div class="col-md-2"><small class="text-muted d-block">CURRENT</small><div class="hp-box"><input type="text" id="curr_hp" class="w-100" value="18"></div></div>
-                        <div class="col-md-2"><small class="text-muted d-block">AC</small><input type="text" id="ac_val" class="h3 text-center w-100" value="17"></div>
+                        <div class="col-md-2"><small class="text-muted d-block">MAX HP</small><input type="text" id="max_hp" class="h3 text-center w-100" value="9"></div>
+                        <div class="col-md-2"><small class="text-muted d-block">CURRENT</small><div class="hp-box"><input type="text" id="curr_hp" class="w-100" value="9"></div></div>
+                        <div class="col-md-2"><small class="text-muted d-block">AC</small><input type="text" id="ac_val" class="h3 text-center w-100" value="12"></div>
                         <div class="col-md-3 text-center border-start">
                             <small class="text-muted d-block">WOUND LIMIT</small>
-                            <div class="h5 mb-0">7</div>
-                            <small class="text-muted">(3 + 2 END + 2 Hard to Kill)</small>
+                            <div class="h5 mb-0">4</div>
+                            <small class="text-muted">(3 + 1 END)</small>
                         </div>
                         <div class="col-md-3 text-center border-start">
                             <small class="text-muted d-block">CURRENT WOUNDS</small>
@@ -117,10 +117,10 @@
     </div>
 
     <div class="row g-0 mb-5">
-        <div class="col"><div class="stat-box"><div class="small fw-bold">MIGHT</div><div class="stat-value"><input type="text" id="stat_might" value="+2"></div></div></div>
-        <div class="col"><div class="stat-box"><div class="small fw-bold">AGILITY</div><div class="stat-value"><input type="text" id="stat_agility" value="+1"></div></div></div>
-        <div class="col"><div class="stat-box"><div class="small fw-bold">ENDURANCE</div><div class="stat-value"><input type="text" id="stat_end" value="+2"></div></div></div>
-        <div class="col"><div class="stat-box"><div class="small fw-bold">WITS</div><div class="stat-value"><input type="text" id="stat_wits" value="+1"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">MIGHT</div><div class="stat-value"><input type="text" id="stat_might" value="+0"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">AGILITY</div><div class="stat-value"><input type="text" id="stat_agility" value="+2"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">ENDURANCE</div><div class="stat-value"><input type="text" id="stat_end" value="+1"></div></div></div>
+        <div class="col"><div class="stat-box"><div class="small fw-bold">WITS</div><div class="stat-value"><input type="text" id="stat_wits" value="+3"></div></div></div>
         <div class="col"><div class="stat-box"><div class="small fw-bold">CHARM</div><div class="stat-value"><input type="text" id="stat_charm" value="+0"></div></div></div>
     </div>
 
@@ -130,19 +130,20 @@
             <table class="table table-bordered table-sm mb-4">
                 <thead class="table-light"><tr><th>Name</th><th>Ability</th><th>Training</th></tr></thead>
                 <tbody>
-                    <tr><td><input type="text" id="sk_n_1" value="Survival"></td><td><input type="text" id="sk_a_1" value="Wits"></td><td><input type="text" id="sk_t_1" value="Apprentice"></td></tr>
-                    <tr><td><input type="text" id="sk_n_2" value="Endurance Saves"></td><td><input type="text" id="sk_a_2" value="Endurance"></td><td><input type="text" id="sk_t_2" value="Apprentice"></td></tr>
-                    <tr><td><input type="text" id="sk_n_3"></td><td><input type="text" id="sk_a_3"></td><td><input type="text" id="sk_t_3"></td></tr>
-                    <tr><td><input type="text" id="sk_n_4"></td><td><input type="text" id="sk_a_4"></td><td><input type="text" id="sk_t_4"></td></tr>
-                    <tr><td><input type="text" id="sk_n_5"></td><td><input type="text" id="sk_a_5"></td><td><input type="text" id="sk_t_5"></td></tr>
+                    <tr><td><input type="text" id="sk_n_1" value="Perception"></td><td><input type="text" id="sk_a_1" value="Wits"></td><td><input type="text" id="sk_t_1" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_2" value="Stealth"></td><td><input type="text" id="sk_a_2" value="Agility"></td><td><input type="text" id="sk_t_2" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_3" value="Survival"></td><td><input type="text" id="sk_a_3" value="Wits"></td><td><input type="text" id="sk_t_3" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_4" value="Athletics"></td><td><input type="text" id="sk_a_4" value="Might"></td><td><input type="text" id="sk_t_4" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_5" value="Ranged Weapons"></td><td><input type="text" id="sk_a_5" value="Agility"></td><td><input type="text" id="sk_t_5" value="Apprentice"></td></tr>
+                    <tr><td><input type="text" id="sk_n_6" value="Initiative Training"></td><td><input type="text" id="sk_a_6" value="-"></td><td><input type="text" id="sk_t_6" value="Apprentice"></td></tr>
                 </tbody>
             </table>
             <h3>Powers & Abilities</h3>
             <table class="table table-bordered table-sm mb-4">
                 <thead class="table-light"><tr><th style="width: 30%;">Name</th><th style="width: 70%;">Effect</th></tr></thead>
                 <tbody>
-                    <tr><td><input type="text" id="p_n_1" value="Unarmed Strike"></td><td><input type="text" id="p_e_1" value="Melee, +6 Hit (4 Apprentice + 2 Might), 1d2+2 Kinetic (1 Energy)"></td></tr>
-                    <tr><td><input type="text" id="p_n_2" value="Hard to Kill"></td><td><input type="text" id="p_e_2" value="Increase Wound Limit by 2"></td></tr>
+                    <tr><td><input type="text" id="p_n_1" value="Deadeye"></td><td><input type="text" id="p_e_1" value="Action, 4 Energy: +5 bonus to next ranged attack (lost if you or target moves)"></td></tr>
+                    <tr><td><input type="text" id="p_n_2"></td><td><input type="text" id="p_e_2"></td></tr>
                     <tr><td><input type="text" id="p_n_3"></td><td><input type="text" id="p_e_3"></td></tr>
                     <tr><td><input type="text" id="p_n_4"></td><td><input type="text" id="p_e_4"></td></tr>
                     <tr><td><input type="text" id="p_n_5"></td><td><input type="text" id="p_e_5"></td></tr>
@@ -158,17 +159,17 @@
             </div>
             <div class="card mb-4">
                 <div class="card-header bg-secondary text-white fw-bold">Inventory</div>
-                <div class="card-body p-0"><textarea id="inv_box" rows="6" placeholder="List items...">Combat Vest (6 credits)</textarea></div>
+                <div class="card-body p-0"><textarea id="inv_box" rows="6" placeholder="List items...">Rifle (6 credits), Tactical Vest with Skull Emblem</textarea></div>
             </div>
             <h3>Progression</h3>
             <table class="table table-sm table-bordered">
                 <thead class="table-light"><tr><th style="width: 30%;">Source</th><th style="width: 70%;">Effect</th></tr></thead>
                 <tbody>
-                    <tr><td><input type="text" id="pr_s_1" value="Phenotype"></td><td><input type="text" id="pr_e_1" value="+1 Might, Weapon Training (Apprentice) - Unarmed Strikes"></td></tr>
-                    <tr><td><input type="text" id="pr_s_2" value="Subtype"></td><td><input type="text" id="pr_e_2" value="+1 Endurance, Hard to Kill Talent"></td></tr>
-                    <tr><td><input type="text" id="pr_s_3" value="Powerset"></td><td><input type="text" id="pr_e_3" value="+1 End, +2 Ability Boost (+1 MGT, +1 AGI), Heavy Armor Training, +2 AC, Endurance Saves Apprentice"></td></tr>
+                    <tr><td><input type="text" id="pr_s_1" value="Phenotype"></td><td><input type="text" id="pr_e_1" value="+1 Wits, Initiative Training (Apprentice)"></td></tr>
+                    <tr><td><input type="text" id="pr_s_2" value="Subtype"></td><td><input type="text" id="pr_e_2" value="+1 Agility, Skill Training (Apprentice) - Stealth (Agility)"></td></tr>
+                    <tr><td><input type="text" id="pr_s_3" value="Powerset"></td><td><input type="text" id="pr_e_3" value="+1 Agility (inherent), +2 Ability Boost (+1 WIT, +1 END), Perception Apprentice, Athletics (Might) Apprentice, Ranged Weapon Apprentice, Deadeye Talent"></td></tr>
                     <tr><td><input type="text" id="pr_s_4" value="Background"></td><td><input type="text" id="pr_e_4" value="+1 Wits, Survival (Wits) Apprentice"></td></tr>
-                    <tr><td><input type="text" id="pr_s_5" value="Bastion Talent"></td><td><input type="text" id="pr_e_5" value="Ironbound"></td></tr>
+                    <tr><td><input type="text" id="pr_s_5"></td><td><input type="text" id="pr_e_5"></td></tr>
                     <tr><td><input type="text" id="pr_s_6"></td><td><input type="text" id="pr_e_6"></td></tr>
                     <tr><td><input type="text" id="pr_s_7"></td><td><input type="text" id="pr_e_7"></td></tr>
                     <tr><td><input type="text" id="pr_s_8"></td><td><input type="text" id="pr_e_8"></td></tr>
@@ -179,18 +180,20 @@
         </div>
     </div>
     <div class="row mt-2"><div class="col-12"><h3>Notes</h3><div class="note-box"><textarea id="notes_main" rows="4"></textarea></div></div></div>
-    <div class="row mt-2"><div class="col-12"><h3>Backstory</h3><div class="note-box"><textarea id="notes_back" rows="4">Cassidy Miller was born in the Dust Belts, struggling agricultural states on the Terra frontiers. Her father, a structural welder, taught her that anything can be fixed with enough heat and a steady hand.
+    <div class="row mt-2"><div class="col-12"><h3>Backstory</h3><div class="note-box"><textarea id="notes_back" rows="4">James Cross was a decorated Free States Army sniper, known for his precision and unwavering focus. He had everything: a loving wife, two children, and a promising career. Then came the Varysk Campaign.
 
-When local syndicates began shaking down workers, a teenage Cassidy fashioned crude armor from welding equipment and hull-plating scraps. She became a nightmare for bullies and debt collectors, earning a reputation as an "unmovable object."
+While Cross was deployed, a local crime syndicate moved into his neighborhood. When his wife refused their protection racket, they made an example of her. Cross returned home to find his family dead, his house burned, and the syndicate's mark left as a message.
 
-She joined the Free States Army to protect more than just her neighborhood. During the Varysk Campaign, her true power revealed itself when her unit was pinned in a collapsing spire. While the building crumbled around them, Cassidy anchored herself and held the structural supports together with her bare hands, allowing her squad to evacuate. She walked out of the rubble carrying her commanding officer, her enhanced durability and strength fully awakened for the first time.
+The military offered counseling. The police promised an investigation. Cross took his rifle and disappeared.
 
-The government tried to market her as "Lady Liberty" in a flashy spandex suit, but Cassidy refused. She dropped her combat boots on the General's desk and declared, "I'm a soldier, not a mascot." They compromised on "Vanguard", a name honoring her position at the front of every charge.</textarea></div></div></div>
-    <div class="row mt-2"><div class="col-12"><h3>Appearance</h3><div class="note-box"><textarea id="notes_app" rows="4">Cassidy has short, dark brown hair that's often windswept from action. Her face carries a stern, focused expression, with dark, intense eyes that constantly scan for threats. She's in her late twenties, with the weathered look of someone who's seen real combat.
+Now he hunts criminals with the same methodical precision he once used on enemy combatants. He doesn't care about due process, collateral damage, or the law. If you're on his list, you're dead. The skull emblem on his shoulder pad serves as a warning: cross the Grim Reaper, and there's no coming back.
 
-She wears heavy, segmented armor in dark metallic grey, showing patches of rust and wear that speak to extensive field use. The armor is layered and robust, covering her torso, arms, and legs with gauntlets, pauldrons, and greaves. Beneath the armor, a dark form-fitting undersuit provides additional protection. A utility belt with multiple pouches is strapped around her waist, carrying essential gear. Her boots are sturdy and dark brown, built for durability over style.
+He works alone, trusts no one, and leaves no witnesses. The only thing that matters is thinning the herd of those who prey on the innocent.</textarea></div></div></div>
+    <div class="row mt-2"><div class="col-12"><h3>Appearance</h3><div class="note-box"><textarea id="notes_app" rows="4">James Cross is a rugged man in his late thirties, with a chiseled jawline and intense, dark eyes that have seen too much. A prominent scar runs across the bridge of his nose and down his left cheek, a permanent reminder of the war that shaped him. He keeps his dark brown hair short and practical, and maintains a neatly trimmed beard.
 
-Her posture is always ready, weight slightly shifted, conveying both confidence and constant vigilance. Even at rest, she moves with the economy of motion of a trained soldier who knows how to conserve energy for when it matters.</textarea></div></div></div>
+He wears tactical gear: a dark tactical vest over a dark blue or grey jacket, with multiple pouches and webbing for ammunition and equipment. His most distinctive feature is the dark grey metallic shoulder pad on his right shoulder, emblazoned with a white skull emblem. He moves with the economy of motion of a trained soldier, every action deliberate and purposeful.
+
+His rifle is always within reach, and his fingerless tactical gloves are stained with the grime of countless stakeouts and firefights. Even at rest, his eyes constantly scan his surroundings, looking for threats, exits, and targets.</textarea></div></div></div>
 
     <p class="mt-5 no-print text-center">
         <a href="../pregens.html" class="text-info text-decoration-none">&larr; Back to Pregens</a>
@@ -198,8 +201,8 @@ Her posture is always ready, weight slightly shifted, conveying both confidence 
 </div>
 
 <script>
-    // UNIQUE PREFIX FOR VANGUARD
-    const sheetPrefix = 'vanguard_';
+    // UNIQUE PREFIX FOR GRIM REAPER
+    const sheetPrefix = 'grimreaper_';
 
     function toggleDarkMode() {
         const body = document.body;
@@ -220,9 +223,9 @@ Her posture is always ready, weight slightly shifted, conveying both confidence 
         allInputs.forEach(el => {
             if (el.id) {
                 const val = localStorage.getItem(sheetPrefix + el.id);
-                // Handle default for Vanguard if no save exists
+                // Handle default for Grim Reaper if no save exists
                 if (el.id === 'hero_name' && (val === null || val === '')) {
-                    el.value = "Vanguard";
+                    el.value = "Grim Reaper";
                 } else if (val !== null) {
                     el.value = val;
                 }
