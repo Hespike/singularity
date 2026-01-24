@@ -171,5 +171,34 @@ const searchIndex = [
     { title: "Combat Vest", url: "equipment/armors/combat_vest.html", tags: "armor, medium" },
     { title: "Plated Assault Armor", url: "equipment/armors/plated_assault_armor.html", tags: "armor, heavy" },
     { title: "Weapon Traits", url: "equipment/weapon_traits.html", tags: "rules, equipment, properties" },
-    { title: "Armor Traits", url: "equipment/armor_traits.html", tags: "rules, equipment, properties" }
+    { title: "Armor Traits", url: "equipment/armor_traits.html", tags: "rules, equipment, properties" },
+
+    // Weapon Modifications
+    { title: "Weapon Modifications", url: "equipment/weapon_modifications.html", tags: "equipment, upgrade, enhance, list" },
+    { title: "Damage Type Conversion", url: "equipment/modifications/weapon_modifications/damage_type_conversion.html", tags: "weapon mod, damage type, change" },
+    { title: "Damage Enhancement I", url: "equipment/modifications/weapon_modifications/damage_enhancement_i.html", tags: "weapon mod, damage bonus, dice" },
+    { title: "Damage Enhancement II", url: "equipment/modifications/weapon_modifications/damage_enhancement_ii.html", tags: "weapon mod, damage bonus, dice" },
+    { title: "Damage Enhancement III", url: "equipment/modifications/weapon_modifications/damage_enhancement_iii.html", tags: "weapon mod, damage bonus, dice" },
+    { title: "Damage Enhancement IV", url: "equipment/modifications/weapon_modifications/damage_enhancement_iv.html", tags: "weapon mod, damage bonus, dice" },
+
+    // Armor Modifications
+    { title: "Armor Modifications", url: "equipment/armor_modifications.html", tags: "equipment, upgrade, enhance, list" },
+    { title: "Armor Enhancement I", url: "equipment/modifications/armor_modifications/armor_enhancement_i.html", tags: "armor mod, ac bonus, defense" },
+    { title: "Armor Enhancement II", url: "equipment/modifications/armor_modifications/armor_enhancement_ii.html", tags: "armor mod, ac bonus, defense" },
+    { title: "Armor Enhancement III", url: "equipment/modifications/armor_modifications/armor_enhancement_iii.html", tags: "armor mod, ac bonus, defense" },
+    { title: "Armor Enhancement IV", url: "equipment/modifications/armor_modifications/armor_enhancement_iv.html", tags: "armor mod, ac bonus, defense" },
+    { title: "Resistance Enhancement I", url: "equipment/modifications/armor_modifications/resistance_enhancement_i.html", tags: "armor mod, damage resistance, defense" },
+    { title: "Resistance Enhancement II", url: "equipment/modifications/armor_modifications/resistance_enhancement_ii.html", tags: "armor mod, damage resistance, defense" },
+    { title: "Resistance Enhancement III", url: "equipment/modifications/armor_modifications/resistance_enhancement_iii.html", tags: "armor mod, damage resistance, defense" },
+    { title: "Resistance Enhancement IV", url: "equipment/modifications/armor_modifications/resistance_enhancement_iv.html", tags: "armor mod, damage resistance, defense" },
+    { title: "Silence Enhancement I", url: "equipment/modifications/armor_modifications/silence_enhancement_i.html", tags: "armor mod, stealth, noisy, quiet" },
+    { title: "Silence Enhancement II", url: "equipment/modifications/armor_modifications/silence_enhancement_ii.html", tags: "armor mod, stealth, noisy, quiet" },
+    { title: "Silence Enhancement III", url: "equipment/modifications/armor_modifications/silence_enhancement_iii.html", tags: "armor mod, stealth, noisy, quiet" },
+    { title: "Silence Enhancement IV", url: "equipment/modifications/armor_modifications/silence_enhancement_iv.html", tags: "armor mod, stealth, noisy, quiet" },
+    { title: "Silence Enhancement V", url: "equipment/modifications/armor_modifications/silence_enhancement_v.html", tags: "armor mod, stealth, noisy, quiet" },
+    { title: "Safeguard Enhancement I", url: "equipment/modifications/armor_modifications/safeguard_enhancement_i.html", tags: "armor mod, saving throw, bonus, resilience" },
+    { title: "Safeguard Enhancement II", url: "equipment/modifications/armor_modifications/safeguard_enhancement_ii.html", tags: "armor mod, saving throw, bonus, resilience" },
+    { title: "Safeguard Enhancement III", url: "equipment/modifications/armor_modifications/safeguard_enhancement_iii.html", tags: "armor mod, saving throw, bonus, resilience" },
+    { title: "Safeguard Enhancement IV", url: "equipment/modifications/armor_modifications/safeguard_enhancement_iv.html", tags: "armor mod, saving throw, bonus, resilience" },
+    { title: "Safeguard Enhancement V", url: "equipment/modifications/armor_modifications/safeguard_enhancement_v.html", tags: "armor mod, saving throw, bonus, resilience" }
 ];
