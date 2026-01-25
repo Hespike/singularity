@@ -173,6 +173,17 @@ const searchIndex = [
     { title: "Weapon Traits", url: "equipment/weapon_traits.html", tags: "rules, equipment, properties" },
     { title: "Armor Traits", url: "equipment/armor_traits.html", tags: "rules, equipment, properties" },
 
+    // Consumables
+    { title: "Consumables", url: "equipment/consumable.html", tags: "items, single-use, temporary, effects" },
+    { title: "Underwater Breathing Gel", url: "equipment/consumables/underwater_breathing_gel.html", tags: "consumable, water, breathing, aquatic" },
+    { title: "Glow Stick", url: "equipment/consumables/glow_stick.html", tags: "consumable, light, illumination, torch" },
+    { title: "Med-Gel I", url: "equipment/consumables/med_gel_i.html", tags: "consumable, healing, hp, medical" },
+    { title: "Med-Gel II", url: "equipment/consumables/med_gel_ii.html", tags: "consumable, healing, hp, medical" },
+    { title: "Med-Gel III", url: "equipment/consumables/med_gel_iii.html", tags: "consumable, healing, hp, medical" },
+    { title: "Med-Gel IV", url: "equipment/consumables/med_gel_iv.html", tags: "consumable, healing, hp, medical" },
+    { title: "Med-Gel V", url: "equipment/consumables/med_gel_v.html", tags: "consumable, healing, hp, medical" },
+    { title: "Med-Gel VI", url: "equipment/consumables/med_gel_vi.html", tags: "consumable, healing, hp, medical" },
+
     // Weapon Modifications
     { title: "Weapon Modifications", url: "equipment/weapon_modifications.html", tags: "equipment, upgrade, enhance, list" },
     { title: "Damage Type Conversion", url: "equipment/modifications/weapon_modifications/damage_type_conversion.html", tags: "weapon mod, damage type, change" },
