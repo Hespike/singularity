@@ -139,6 +139,8 @@ const searchIndex = [
     { title: "Brace", url: "battle_encounters/actions/brace.html", tags: "action, defense, ac" },
     { title: "Draw", url: "battle_encounters/actions/draw.html", tags: "action, equip, item" },
     { title: "Drop", url: "battle_encounters/actions/drop.html", tags: "action, free, item" },
+    { title: "Healing", url: "battle_encounters/actions/healing.html", tags: "action, heal, hp, medical, medicine" },
+    { title: "Intimidate", url: "battle_encounters/actions/intimidate.html", tags: "action, intimidation, charm, scared, fear, social" },
     { title: "Move", url: "battle_encounters/actions/move.html", tags: "action, movement, speed" },
     { title: "Reposition", url: "battle_encounters/actions/reposition.html", tags: "action, shove, push" },
     { title: "Stand Up", url: "battle_encounters/actions/standup.html", tags: "action, prone, get up" },
