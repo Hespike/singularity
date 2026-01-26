@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="col-12 text-center">
                     <p class="mb-3 text-muted" style="color: #a0aec0 !important; font-size: 0.9rem;">Join our community</p>
                     <div class="social-links d-flex justify-content-center gap-3 flex-wrap">
-                        <a href="https://discord.gg/AbBtu3XG" target="_blank" rel="noopener noreferrer" class="social-link" title="Discord" aria-label="Discord">
+                        <a href="https://discord.gg/pe6Bb2rHgW" target="_blank" rel="noopener noreferrer" class="social-link" title="Discord" aria-label="Discord">
                             <i class="fab fa-discord"></i>
                         </a>
                         <a href="https://www.facebook.com/SingularityTTRPG/" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook" aria-label="Facebook">

@@ -34,7 +34,7 @@ The author of Singularity explicitly grants permission for the creation and publ
 
 ## Community
 
-- [Discord](https://discord.gg/AbBtu3XG)
+- [Discord](https://discord.gg/pe6Bb2rHgW)
 - [Facebook](https://www.facebook.com/SingularityTTRPG/)
 - [Reddit](https://www.reddit.com/r/SingularityTTRPG/)
 - [YouTube](https://www.youtube.com/@SingularityTTRPG)
