@@ -174,6 +174,7 @@ const searchIndex = [
     { title: "Plated Assault Armor", url: "equipment/armors/plated_assault_armor.html", tags: "armor, heavy" },
     { title: "Weapon Traits", url: "equipment/weapon_traits.html", tags: "rules, equipment, properties" },
     { title: "Armor Traits", url: "equipment/armor_traits.html", tags: "rules, equipment, properties" },
+    { title: "Noisy", url: "equipment/armor_traits/noisy.html", tags: "armor trait, noise, stealth penalty" },
 
     // Consumables
     { title: "Consumables", url: "equipment/consumable.html", tags: "items, single-use, temporary, effects" },
