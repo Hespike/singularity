@@ -129,6 +129,7 @@ const searchIndex = [
     { title: "Saving Throw Training", url: "character_creation/talents.html", tags: "apprentice, competent, masterful, legendary, saves" },
     { title: "Skill Training", url: "character_creation/talents.html", tags: "apprentice, competent, masterful, legendary, skills" },
     { title: "Hard to Kill", url: "character_creation/talents/hard_to_kill.html", tags: "generic talent, health, wounds, death" },
+    { title: "Enhanced Vitality", url: "character_creation/talents/enhanced_vitality.html", tags: "talent, enhanced vitality, hp, hit points, resilience" },
     { title: "Initiative Training", url: "character_creation/talents/initiative_training_apprentice.html", tags: "generic talent, speed, reaction" },
     { title: "Marine Training", url: "character_creation/talents/marine_training.html", tags: "generic talent, water, aquatic, swimming" },
     { title: "Swift Runner", url: "character_creation/talents/swift_runner.html", tags: "generic talent, speed, movement" },
