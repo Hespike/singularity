@@ -108,6 +108,7 @@ const searchIndex = [
     { title: "Remote Med-Siphon", url: "character_creation/powersets/gadgeteer/gadgets/remote_med_siphon.html", tags: "gadget, healing, range" },
     { title: "Sonic Grenade", url: "character_creation/powersets/gadgeteer/gadgets/sonic_grenade.html", tags: "gadget, aoe, stun, daze" },
     { title: "Trauma Stabilizer", url: "character_creation/powersets/gadgeteer/gadgets/trauma_stabilizer.html", tags: "gadget, healing, touch" },
+    { title: "Adrenaline Injector", url: "character_creation/powersets/gadgeteer/gadgets/adrenaline_injector.html", tags: "gadget, buff, speed, attack, saving throw, fatigued" },
     { title: "Enough Prep Time", url: "character_creation/powersets/gadgeteer/gadgeteer_talents/enough_prep_time.html", tags: "gadgeteer talent, planning, bonus" },
     { title: "Expanded Loadout", url: "character_creation/powersets/gadgeteer/gadgeteer_talents/expanded_loadout.html", tags: "gadgeteer talent, slots, preparation" },
     { title: "Improvised Gadget", url: "character_creation/powersets/gadgeteer/gadgeteer_talents/improvised_gadget.html", tags: "gadgeteer talent, create, random" },
